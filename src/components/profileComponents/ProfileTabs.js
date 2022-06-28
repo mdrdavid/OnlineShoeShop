@@ -1,0 +1,36 @@
+import React from 'react'
+
+const ProfileTabs = ()=> {
+  return (
+    <div className='row form-container'>
+        <div className='col-md-6'>
+            <div className='form'>
+                <label htmlFor='acount-fn'>UserName</label>
+                <input className='form-control' type="text" required/>
+            </div>
+        </div>
+        <div className='col-md-6'>
+            <div className='form'>
+            <label htmlFor='acount-fn'>E-mail Address</label>
+                <input className='form-control' type="emial"/>
+                
+            </div>
+        </div>
+        <div className='col-md-6'>
+            <div className='form'>
+            <label htmlFor='acount-fn'>New Password</label>
+                <input className='form-control' type="password"/>
+                
+            </div>
+        </div>
+        <div className='col-md-6'>
+            <div className='form'>
+            <label htmlFor='acount-fn'>Confirm Password</label>
+                <input className='form-control' type="password"/>
+            </div>
+        </div>
+        <button type='submit'>Update Profile</button>
+    </div>
+  )
+}
+export default ProfileTabs
