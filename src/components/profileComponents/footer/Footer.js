@@ -1,9 +1,10 @@
 import React from 'react'
+import "./footer.css"
 
 const Footer= ()=> {
   return (
     <div className='footer'>
-      <div className='justify-content-center d-flex'>
+      <div className='footer-container'>
         <div className='card-name'>
           <img src='ttt'
           alt='Master card'/>

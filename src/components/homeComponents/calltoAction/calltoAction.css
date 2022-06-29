@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.subscription-section{
+    position: relative;
+
+}
+.container{
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    /* justify-content: center; */
+    width: 100vw;
+    height: 400px;
+    background-color: white;
+
+}
+.subscribe-head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   background-color: gray;
+  height: 200px;
+  width: 100vw;
+  
+
+}
+.subscribe-head h5{
+    font-size: 30px;
+    color: white;
+    padding: 10px;
+}
+.subscribe-head p{
+    font-size: 16px;
+    color: white;
+    padding: 10px;
+}
+.input{
+    border-radius: 10px;
+    border: none;
+    width: 300px;
+    padding: 10px;
+    background-color: white;
+}
+
+.btn-submit{
+    padding: 10px;
+    width: 150px;
+    height: auto;
+    font-size: 16px;
+    border-radius: 10px;
+    border:none;
+    background-color: green;
+    cursor: pointer;
+}

@@ -1,10 +1,11 @@
 import React from 'react'
+import "./contactinfo.css"
 
 const ContactInfo = ()=> {
   return (
     <div className='contactinfo container'>
-        <div className='row'>
-            <div className='col-12 col-md-4 conatct-Box'>
+        <div className='contacts'>
+            <div className='contact-Box'>
                 <div className='box-info'>
                     <div className='info-image'>
                         <i className='fas  fa-phone=alt'></i>
@@ -13,7 +14,7 @@ const ContactInfo = ()=> {
                     <p>+256 702629361</p>
                 </div>
             </div>
-            <div className='col-12 col-md-4 contact-Box'>
+            <div className=' contact-Box'>
             <div className='box-info'>
                     <div className='info-image'>
                         <i className='fas  fa-map-market-alt'></i>
@@ -22,7 +23,7 @@ const ContactInfo = ()=> {
                     <p>Kampala Uganda</p>
                 </div>
             </div>
-            <div className='col-12 col-md-4 contact-Box'>
+            <div className=' contact-Box'>
             <div className='box-info'>
                     <div className='info-image'>
                         <i className='fas  fa-fax'></i>

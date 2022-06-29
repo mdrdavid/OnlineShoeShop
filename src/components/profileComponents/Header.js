@@ -1,36 +1,12 @@
 import React from 'react'
 import { Link } from "react-router-dom"
+import TopHeader from '../topheader/TopHeader';
 
 const Header = () => {
   return (
     <div>
       {/* to header */}
-      <div className='Announcement'>
-        <div className='container'>
-          <div className='col-md-6 d-flex align-items-center display-none'>
-            <p>+256 771626807</p>
-            <p>david775@gmail.com</p>
-          </div>
-          <div className='col-md-6 d-flex align-items-center display-none'>
-            <Link to="">
-              <i className='fab fa-facebook-f'></i>
-            </Link>
-            <Link to="">
-              <i className='fab fa-instagram'></i>
-            </Link>
-            <Link to="">
-              <i className='fab fa-linkedin-in'></i>
-            </Link>
-            <Link to="">
-              <i className='fab fa-youtube'></i>
-            </Link>
-            <Link to="">
-              <i className='fab fa-pinterest-p'></i>
-            </Link>
-          </div>
-        </div>
-      </div>
-      // Header
+      <TopHeader/>
       <div className='header'>Mobile Header
         <div className='container'>
           {/* Mobile Header */}
@@ -92,10 +68,13 @@ const Header = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
 
-            {/* PC HEADER */}
 
-            <div className='pc-header'>
+       {/* PC HEADER */}
+
+      <div className='pc-header'>
               <div className='row'>
                 <div className='col-md-3 col-4 d-flex align-items-center'>
                   <Link className='navbar-brand' to="/">
@@ -153,9 +132,8 @@ const Header = () => {
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
+          </div>
+
   )
 };
 export default Header

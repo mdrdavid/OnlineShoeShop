@@ -1,0 +1,16 @@
+*{
+    box-sizing: border-box;
+}
+.footer-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap:20px;
+    background-color: gray;
+}
+.card-name{
+    display: flex;
+    gap: 10px;
+    color: white;
+}
