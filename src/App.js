@@ -5,7 +5,7 @@ import CalltoActionSection from './components/homeComponents/calltoAction/Callto
 import ContactInfo from './components/homeComponents/contactInfo/ContactInfo';
 // import Pagination from './components/homeComponents/Pagination';
 import Footer from './components/profileComponents/footer/Footer';
-import Header from './components/profileComponents/Headerssss';
+import Header from './components/profileComponents/mainheader/Header';
 
 function App() {
   return (

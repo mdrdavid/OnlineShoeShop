@@ -1,28 +1,43 @@
 import React from 'react'
 import { Link } from "react-router-dom"
 import TopHeader from '../topheader/TopHeader';
+import logo from "../../../assets/images/logo.jpg"
+import { useState } from "react"
+import "./header.css"
+import {AiFillShopping} from "react-icons/ai"
 
 const Header = () => {
-    return (
+    const [search,setSearch]= useState('')
+    const handleChange =(e)=>{
+        setSearch(e.target.value)
+    }
+    const handleSubmit =(e)=>{
+        e.preventDefault()
+        setSearch('')
+    }
+    return(
         <div className='pc-header'>
             <TopHeader />
-            <div className='row'>
+            <div className='head-container'>
                 <div className='col-md-3 col-4 d-flex align-items-center'>
                     <Link className='navbar-brand' to="/">
-                        <img alt='logo src="images/logo.png' />
+                        <img alt='logo' src={logo} width={60} height={60}/>
                     </Link>
                 </div>
-                <div className='col-6 d-flex align-items-center'>
-                    <form className='input-group'>
+                <div className='links'>
+                    <form className='input-group' onSubmit ={handleSubmit}>
                         <input
                             type="search"
-                            className="form-control rounded search"
+                            className="search-input"
                             placeholder="Search"
+                            value={search}
+                            onChange={handleChange}
                         />
                         <button type="submit" className="search-button">
                             search
                         </button>
                     </form>
+                    </div>
                     <div className='col-md-3 d-flex align-items-center justify-content-end'>
                         <div className='btn-group'>
                             <button
@@ -43,25 +58,12 @@ const Header = () => {
                             </div>
                         </div>
                         <Link to="/cart" className='cart-mobile-icon'>
-                            <i className='fas fa-shopping-bag'></i>
+                            <i className='shopping-bag'><AiFillShopping/></i>
                             <span className='badge'>4</span>
                         </Link>
                     </div>
-                    <div className='col-12 d-flex align-items-center'>
-                        <form className='input-group'>
-                            <input
-                                type="search"
-                                className="form-control rounded search"
-                                placeholder="Search"
-                            />
-                            <button type='submit' className='search-button'>
-                                search
-                            </button>
-                        </form>
-                    </div>
                 </div>
             </div>
-        </div>
     )
 }
 export default Header

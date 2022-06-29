@@ -1,12 +1,14 @@
 import React from 'react'
 import { Link } from "react-router-dom"
-import TopHeader from '../topheader/TopHeader';
+import TopHeader from './topheader/TopHeader';
+// import TopHeader from './topheader/TopHeader';
 
 const Header = () => {
   return (
     <div>
       {/* to header */}
       <TopHeader/>
+      {/* <TopHeader/> */}
       <div className='header'>Mobile Header
         <div className='container'>
           {/* Mobile Header */}
