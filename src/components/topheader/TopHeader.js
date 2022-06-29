@@ -1,15 +1,16 @@
 import React from "react";
 import {Link} from "react-router-dom";
+import "./topheader.css"
 const TopHeader = ()=>{
     return (
         <div>
             <div className='Announcement'>
-        <div className='container'>
-          <div className='col-md-6 d-flex align-items-center display-none'>
+        <div className='topcontainer'>
+          <div className='toplinks'>
             <p>+256 771626807</p>
             <p>david775@gmail.com</p>
           </div>
-          <div className='col-md-6 d-flex align-items-center display-none'>
+          <div className='toplinks'>
             <Link to="">
               <i className='fab fa-facebook-f'></i>
             </Link>

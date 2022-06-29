@@ -1,0 +1,15 @@
+/* *{background-color: green;} */
+.topcontainer{
+    margin-top: 5px;
+    background-color: green;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.toplinks{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    gap: 10px;
+}

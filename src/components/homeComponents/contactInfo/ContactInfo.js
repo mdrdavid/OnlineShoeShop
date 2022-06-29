@@ -1,5 +1,8 @@
 import React from 'react'
 import "./contactinfo.css"
+import {BiPhoneCall} from "react-icons/bi"
+import {FaRegBuilding} from "react-icons/fa"
+import {FaFax} from "react-icons/fa"
 
 const ContactInfo = ()=> {
   return (
@@ -8,7 +11,7 @@ const ContactInfo = ()=> {
             <div className='contact-Box'>
                 <div className='box-info'>
                     <div className='info-image'>
-                        <i className='fas  fa-phone=alt'></i>
+                        <i className='phone'><BiPhoneCall/></i>
                     </div>
                     <h5>call us 24*7</h5>
                     <p>+256 702629361</p>
@@ -17,7 +20,7 @@ const ContactInfo = ()=> {
             <div className=' contact-Box'>
             <div className='box-info'>
                     <div className='info-image'>
-                        <i className='fas  fa-map-market-alt'></i>
+                        <i className='fas  fa-map-market-alt'><FaRegBuilding/></i>
                     </div>
                     <h5>Heatquarter</h5>
                     <p>Kampala Uganda</p>
@@ -26,7 +29,7 @@ const ContactInfo = ()=> {
             <div className=' contact-Box'>
             <div className='box-info'>
                     <div className='info-image'>
-                        <i className='fas  fa-fax'></i>
+                        <i className='fas  fa-fax'><FaFax/></i>
                     </div>
                     <h5>Fax</h5>
                     <p>0771626807</p>
