@@ -1,6 +1,6 @@
 import React from 'react'
-import Rating from './Rating'
-import Pagination from './Pagination'
+import Rating from '../Rating'
+import Pagination from '../Pagination'
 import { Link } from 'react-router-dom'
 
  const  ShopSection= ()=> {
