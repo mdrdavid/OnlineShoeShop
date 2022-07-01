@@ -1,0 +1,32 @@
+
+.login-container{
+    display: flex;
+    justify-content: center;
+}
+.login-form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 300px;
+    height: 250px;
+    border: 1px solid gray;
+}
+.form-input{
+    width: 250px;
+    padding: 12px;
+    outline: none;
+    margin: 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+    background-color: purple;
+}
+
+.btn{
+    padding: 10px;
+    border-radius: 5px;
+    width:250px;
+    font-size: 16px;
+    background-color: green;
+    cursor: pointer;
+    margin: 10px;
+}

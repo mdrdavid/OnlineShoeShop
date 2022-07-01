@@ -1,9 +1,10 @@
 import React from 'react'
-import Rating from './Rating'
-import Pagination from './Pagination'
+import Rating from '../Rating'
+import Pagination from '../Pagination'
 import { Link } from 'react-router-dom'
 
  const  ShopSection= ()=> {
+     const products =["sneakers", "jeans", "sandles"]
   return (
     <div className ="container">
         <div className='section'>
@@ -13,10 +14,12 @@ import { Link } from 'react-router-dom'
                         {products.map(product=>(
                             <div 
                             className='shop col-lf-4 col-md-6 col-sm-6'
-                            key={product._id}
+                            // key={product._id}
+                            key={product}
                             >
                                 <div className='border-product'>
                                     <Link to={'/products/${product._id'}>
+                                    {/* <Link to={'/products/${product'}> */}
                                         <div className='shopBack'>
                                             <img src={product.image} alt={product.name}/>
                                             </div>
