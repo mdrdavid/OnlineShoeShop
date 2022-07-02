@@ -1,10 +1,14 @@
 import React from 'react'
 import Header from '../../components/profileComponents/mainheader/Header'
-import { Link } from 'react-router-dom'
+import { BrowserRouter, Link } from 'react-router-dom'
+import './notfound.css'
 
 const  NotFound= ()=> {
   return (
       <>
+      <BrowserRouter>
+      <Header/>
+      </BrowserRouter>
     <div className='container'>
         <div className='image'>
             <h4 className='text-center'>Page Not Found</h4>
