@@ -32,10 +32,8 @@ const Login= ()=> {
             onChange={handlePassword}
             placeholder='pasword'/>
             <button type='submit' className='btn'>Submit</button>
-            <p>
-            <BrowserRouter>  
+            <p> 
             <Link to={"/register"}>Create Account</Link>
-    </BrowserRouter>
             </p>
 
         </form>

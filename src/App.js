@@ -1,18 +1,35 @@
 
 import './App.css';
-// import { BrowserRouter } from 'react-router-dom';
-// import CartSection from './pages/cartsection/CartSection';
+import { Routes, Route} from 'react-router-dom';
+import CartSection from './pages/cartsection/CartSection';
 import Home from './pages/home/Home';
-// import Login from '../login/Login';
+import Login from './pages/login/Login';
+import SingleProduct from './pages/singleproduct/SingleProduct';
+import Register from './pages/register/Register';
+import Shipping from './pages/shipping/Shipping';
+import PlaceOrder from './pages/placeorder/PlaceOrder'
+import ProfilePage from "./pages/profile/ProfilePage"
+import OrderSection from './pages/orders/OrderSection';
+import NotFound from "./pages/notfound/NotFound"
+import Payments from "./pages/payments/Payments"
+
 
 const App= ()=> {
   return (
     <div className="App">
-     <Home/>
-{/* <BrowserRouter>
-     <CartSection/>
-     </BrowserRouter> */}
-     {/* <Login/> */}
+      <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/products/:id" element={<SingleProduct/>}/>
+          <Route path ="/login" element={<Register/>}/>
+          <Route path ="/profile" element={<ProfilePage/>}/>
+          <Route path ="/cart/:id" element={<CartSection/>}/>
+          <Route path ="/shipping" element={<Shipping/>}/>
+          <Route path ="/payments" element={<Payments/>}/>
+          <Route path="/placeorder" element={<PlaceOrder/>}/>
+          <Route path ="/login" element={<Login/>}/>
+          <Route path ="order" element={<OrderSection/>}/>
+          <Route PATH ="notfound" element={<NotFound/>}/>
+      </Routes>
     </div>
   );
 }

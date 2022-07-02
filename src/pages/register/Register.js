@@ -5,9 +5,9 @@ import Header from '../../components/profileComponents/mainheader/Header'
 import "./register.css"
 
 const Register= ()=> {
-    <BrowserRouter>
+    
     <Header/>
-    </BrowserRouter>
+   
   return (
     <div className='container d-flex flex-column'>
         <form className='login'>

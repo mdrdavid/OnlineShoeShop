@@ -2,15 +2,15 @@ import React from 'react'
 import { BrowserRouter } from 'react-router-dom'
 import Header from '../../components/profileComponents/mainheader/Header'
 import { Link } from 'react-router-dom'
-import {PayPalButton} from "react-paypal-button-v2"
+// import {PayPalButton} from "react-paypal-button-v2"
 import './oders.css'
 
 const  OrderSection= ()=> {
   return (
       <>
-      <BrowserRouter>
+     
       <Header/>
-      </BrowserRouter>
+     
      
     <div className='container'>
         <div className='order-detail'>
@@ -128,9 +128,9 @@ const  OrderSection= ()=> {
                         </tr>
                     </tbody>
                 </table>
-                <div className='col-12'>
+                {/* <div className='col-12'>
                     <PaypalButton amount={345}/>
-                </div>
+                </div> */}
             </div>
         </div>
     </div>

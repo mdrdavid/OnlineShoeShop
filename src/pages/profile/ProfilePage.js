@@ -2,16 +2,15 @@ import React from 'react'
 import Header from "../../components/profileComponents/mainheader/Header"
 import Orders from "../orders/OrderSection"
 import ProfileTabs from "../../components/profileComponents/ProfileTabs"
-import { BrowserRouter } from 'react-router-dom'
 import "./profile.css"
 
 
 const ProfilePage= ()=> {
   return (
     <>
-    <BrowserRouter>
+    
     <Header/>
-    </BrowserRouter>
+  
     
     <div className='conatainer'>
       <div className='row align-items-start'>

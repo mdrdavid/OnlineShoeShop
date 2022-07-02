@@ -1,6 +1,7 @@
 import React from 'react'
 import { BrowserRouter } from 'react-router-dom'
 import Header from '../../components/profileComponents/mainheader/Header'
+import {Link} from "react-router-dom"
 import "./shipping.css"
 
 const Shipping= ()=> {
@@ -9,9 +10,9 @@ const Shipping= ()=> {
     }
   return (
       <>
-      <BrowserRouter>
+     
       <Header/>
-      </BrowserRouter>
+     
     <div className='container f-flex login'>
         <form 
         className='login'

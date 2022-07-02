@@ -6,9 +6,7 @@ import './notfound.css'
 const  NotFound= ()=> {
   return (
       <>
-      <BrowserRouter>
       <Header/>
-      </BrowserRouter>
     <div className='container'>
         <div className='image'>
             <h4 className='text-center'>Page Not Found</h4>

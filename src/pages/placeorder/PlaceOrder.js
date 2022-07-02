@@ -9,9 +9,9 @@ const PlaceOrder= ()=> {
     }
   return (
       <>
-      <BrowserRouter>
+     
       <Header/>
-      </BrowserRouter>
+     
     <div className='container'>
         <div className='order-detail'>
             <div className='col-lg-4'>
