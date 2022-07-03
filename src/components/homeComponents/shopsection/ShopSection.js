@@ -30,6 +30,8 @@ import Products from '../../data/Products'
                                             {/* <Link to={`/Productss/${Products._id}`}
                                             // {...Products.name}
                                             </Link> */}
+                                            <Link to={`/Products/${Products._id}`}
+                                            {...Products.name}></Link>
                                             </p>
                                             <Rating 
                                             value ={Products.rating}
