@@ -14,7 +14,7 @@ console.log("products",Products.image)
                     <div className='shopContainer'>
                         {Products.map(Products=>(
                             <div 
-                            className='shop col-lf-4 col-md-6 col-sm-6'
+                            className='shop'
                             key={Products._id}
                             >
                                 <div className='border-product'>
@@ -40,7 +40,7 @@ console.log("products",Products.image)
                                     </div>
                                     </div>
                         ))}
-                        <Pagination/>
+                        {/* <Pagination/> */}
                         </div>
                     </div>
                 </div>

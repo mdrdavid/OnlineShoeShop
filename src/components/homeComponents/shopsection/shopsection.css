@@ -3,7 +3,27 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 .shopContainer{
     display: grid;
+    column-gap: 20px;
+    row-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    border: 1px solid black;
+    width: 100vw;
+}
+.shoeBack{
+    border: 1px solid lightgrey;
+    grid-column-start: auto;
+    width: 200px;
+    height: 100px;
+}
+.border-product{
+    border: 1px solid black;
+    width: 200px;
+    height: 100px;
+}
+.shoptext{
+    font-size: 18px;
 }
