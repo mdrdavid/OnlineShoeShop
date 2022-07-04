@@ -18,12 +18,24 @@
     text-align: center;
     outline: none;
 }
+.buttons{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.btn-groups{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
 .search-button{
         padding: 10px;
         width: 150px;
         font-size: 16px;
         border:none;
-        background-color: green;
+        background-color: black;
+        color: white;
         cursor: pointer;
        border-left: none;
 }
@@ -31,9 +43,17 @@
     display: flex;
     gap: 10px;
     align-items: center;
+    border: 1px solid lightgray;
 }
 .dropdown-item{
    text-decoration: none;
    color: black;
    font-size: 16px;
+  
+}
+.cart-mobile-icon{
+    padding-left: 10px;
+}
+.cart-mobile-icon .badge{
+    color: red;
 }
