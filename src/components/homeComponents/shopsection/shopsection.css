@@ -1,0 +1,9 @@
+
+.shopsection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.shopContainer{
+    display: grid;
+}

@@ -3,24 +3,22 @@ import Rating from '../Rating'
 import Pagination from '../Pagination'
 import { Link } from 'react-router-dom'
 import Products from '../../data/Products'
+import "./shopsection.css"
 
  const  ShopSection= ()=> {
-    //  const products =["sneakers", "jeans", "sandles"]
+console.log("products",Products.image)
+
   return (
     <div className ="container">
-        <div className='section'>
-            <div className='row'>
-                <div className='col-lh-12 col-md-12 article'>
-                    <div className='shopContainer row'>
+        <div className='shopsection'>
+                    <div className='shopContainer'>
                         {Products.map(Products=>(
                             <div 
                             className='shop col-lf-4 col-md-6 col-sm-6'
                             key={Products._id}
-                            // key={product}
                             >
                                 <div className='border-product'>
                                     <Link to={'/products/${product._id'}>
-                                    {/* <Link to={'/products/${product'}> */}
                                         <div className='shopBack'>
                                             <img src={Products.image} alt={Products.name}/>
                                             </div>
@@ -35,18 +33,17 @@ import Products from '../../data/Products'
                                             </p>
                                             <Rating 
                                             value ={Products.rating}
-                                            text= {`${Products.numReviews} reviews`}/>
+                                            text= {`${Products.numReviews} reviews`}
+                                            image={Products.image}/>
                                             <h3>${Products.price}</h3>
                                             </div>
                                     </div>
                                     </div>
                         ))}
                         <Pagination/>
-                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-  )
+)
 }
 export default ShopSection

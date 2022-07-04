@@ -8,10 +8,7 @@ import "./profile.css"
 const ProfilePage= ()=> {
   return (
     <>
-    
     <Header/>
-  
-    
     <div className='conatainer'>
       <div className='row align-items-start'>
         <div className='col-lg-4 shadow'>
@@ -63,6 +60,7 @@ const ProfilePage= ()=> {
     </div>
     <div className='tab-content'
     id='v-pills-tabcontent'>
+      <ProfileTabs/>
     </div>
     </>
   )

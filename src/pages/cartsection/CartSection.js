@@ -17,7 +17,7 @@ const  CartSection= ()=> {
                 <i className='fas fa-times'></i>
             </div>
             <div className='cart-image'>
-                <img src='' alt='nike image'/>
+                <img src='/assets/images' alt='nike'/>
             </div>
             <div className='cart-text'>
                 <Link to="#">
@@ -51,7 +51,7 @@ const  CartSection= ()=> {
             </Link>
             <div className='shipping'>
                 <button>
-                    <Link to="shipping" className='text-white'>
+                    <Link to="/shipping" className='text-white'>
                         Checkout
                     </Link>
                 </button>

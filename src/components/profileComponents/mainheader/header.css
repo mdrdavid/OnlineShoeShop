@@ -55,5 +55,10 @@
     padding-left: 10px;
 }
 .cart-mobile-icon .badge{
+    /* border: 1px solid lightgray;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; */
     color: red;
+    font-size: 18px;
 }

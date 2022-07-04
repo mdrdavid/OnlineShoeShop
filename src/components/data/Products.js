@@ -1,10 +1,11 @@
 import React from 'react'
+import shoes from "../../assets/images/shoes.jpg"
 
 const Products= [
     {
         _id: "1",
         name: "velco for girls",
-        image:"/assets/images",
+        image:"../../assets/images/shoe.jpg",
         description:"it the best product for u",
         price: 87,
         countInStock:3,
@@ -14,7 +15,7 @@ const Products= [
     {
         _id: "2",
         name: "sss",
-        image:"/assets/images",
+        image:"/assets/images/shoes.jpg",
         description:"it the best product for girls",
         price: 100,
         countInStock:10,
