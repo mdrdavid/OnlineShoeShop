@@ -1,0 +1,57 @@
+.container{
+    display: flex;
+    flex-direction: column;
+}
+.order-detail{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+}
+.order-products{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+}
+.order-product{
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    justify-content: space-around;
+    align-items: center;
+}
+.order-box{
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 50%;
+    padding-top: 5px;
+}
+.subtotal-order{
+    display: flex;
+    flex-direction: column;
+}
+.table{
+    border: 1px solid black;
+}
+.place-order{
+    padding: 10px;
+    background-color: green;
+    width: 300px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+   
+}
+.place-order{
+    color: white;
+    text-decoration: none;
+}
+.user{
+    display: flex;
+    flex-direction: row;
+}

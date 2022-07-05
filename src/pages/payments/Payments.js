@@ -10,18 +10,17 @@ const Payments= ()=> {
   return (
       <>
       <Header/>
-    <div className='container f-flex'>
+    <div className='container'>
         <form className='login2' onSubmit={submitHandler}>
-            <h6>SELECT PAYMENT METHOD</h6>
+            <h6 className='select-pay'>SELECT PAYMENT METHOD</h6>
             <div className='payment-container'>
                 <div className='radio-container'>
                     <input className='form-check-input' type="radio" value="paypal"/>
-                    <label className='form-check-label'>paypal or Credit Card</label>
+                    <label className='form-check-label'>Mobile Money or Credit Card</label>
                 </div>
             </div>
-            
-            <button type='submit'>
-            <Link to="/placeorder" className='text-white'></Link>
+            <button type='submit' className='button'>
+            <Link to="/placeorder" className='text-continue'>Continue</Link>
             </button>
            
         </form>

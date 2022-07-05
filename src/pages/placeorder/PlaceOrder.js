@@ -1,6 +1,9 @@
 import React from 'react'
-import { BrowserRouter, Link } from 'react-router-dom'
 import Header from '../../components/profileComponents/mainheader/Header'
+import{FaUserAlt} from "react-icons/fa"
+import {RiTruckFill} from "react-icons/ri"
+import {Link} from "react-router-dom"
+import {GoLocation} from "react-icons/go"
 import "./placeorder.css"
 
 const PlaceOrder= ()=> {
@@ -9,16 +12,13 @@ const PlaceOrder= ()=> {
     }
   return (
       <>
-     
       <Header/>
-     
     <div className='container'>
         <div className='order-detail'>
-            <div className='col-lg-4'>
-                <div className='row'>
+                <div className='user'>
                     <div className='col-md-4 center'>
                         <div className='alert-success order-box'>
-                            <i className='fasn fa-user'></i>
+                            <i className='fa-user'><FaUserAlt/></i>
                         </div>
                     </div>
                     <div className='col-md-8 center'>
@@ -29,13 +29,12 @@ const PlaceOrder= ()=> {
                         <p>dmatovu775@gmail.com</p>
                     </div>
                 </div>
-            </div>
             {/* 2 */}
             <div className='col-lg-4'>
-                <div className='row'>
+                <div className='user'>
                     <div className='col-md-4 center'>
                         <div className='alert-success order-box'>
-                            <i className='fasn fa-truck-moving'></i>
+                            <i className='fasn fa-truck-moving'><RiTruckFill/></i>
                         </div>
                     </div>
                     <div className='col-md-8 center'>
@@ -49,10 +48,10 @@ const PlaceOrder= ()=> {
             </div>
             {/* 3 */}
             <div className='col-lg-4'>
-                <div className='row'>
+                <div className='user'>
                     <div className='col-md-4 center'>
                         <div className='alert-success order-box'>
-                            <i className='fasn fa-user'></i>
+                            <i className='fasn fa-user'><GoLocation/></i>
                         </div>
                     </div>
                     <div className='col-md-8 center'>
@@ -65,9 +64,8 @@ const PlaceOrder= ()=> {
             </div>
         </div>
 
-        <div className='order-products justify-content-between'>
-            <div className='col-lg-8'>
-                <div className='order-product d-flex' >
+        <div className='order-products'>
+                <div className='order-product' >
                     <div className='col-md-3'>
                         <img src="imgae" alt='product'/>
                     </div>
@@ -85,10 +83,9 @@ const PlaceOrder= ()=> {
                         <h6>#567</h6>
                     </div>
                 </div>
-            </div>
             {/* total */}
-            <div className='d-flex  direction-column subtotal-order'>
-                <table className='table table-bordered'>
+            <div className=' subtotal-order'>
+                <table className='table'>
                     <tbody>
                         <tr>
                             <td>
@@ -116,8 +113,8 @@ const PlaceOrder= ()=> {
                         </tr>
                     </tbody>
                 </table>
-                <button type='submit' onClick={placeOrderHandler}>
-                    <Link to="/order" className='text-white'>
+                <button type='submit' onClick={placeOrderHandler} className="place-order">
+                    <Link to="/order" className='place-order'>
                         Place Order
                     </Link>
                 </button>
