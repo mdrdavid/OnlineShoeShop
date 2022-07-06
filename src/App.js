@@ -29,7 +29,8 @@ const App= ()=> {
           <Route path ="/login" element={<Login/>}/>
           <Route path ="order" element={<OrderSection/>}/>
           <Route PATH ="notfound" element={<NotFound/>}/>
-          <Route PATH ="cart" element={<CartSection/>}/>
+          <Route path="/cart:productid" element={<CartSection/>} />
+          <Route path="/cart" element={<CartSection />} />
       </Routes>
     </div>
   );

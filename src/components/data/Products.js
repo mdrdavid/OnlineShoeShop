@@ -5,7 +5,7 @@ const Products= [
     {
         _id: "1",
         name: "velco for girls",
-        image:"../../assets/images/shoe.jpg",
+        imageUrl:"https://unsplash.com/photos/jvoZ-Aux9aw",
         description:"it the best product for u",
         price: 87,
         countInStock:3,
@@ -15,7 +15,7 @@ const Products= [
     {
         _id: "2",
         name: "sss",
-        image:"/assets/images/shoes.jpg",
+        imageFile:{shoes},
         description:"it the best product for girls",
         price: 100,
         countInStock:10,
@@ -35,7 +35,7 @@ const Products= [
     {
         _id: "4",
         name: "sneakers",
-        image:"/assets/images",
+        imageFile:"/assets/images",
         description:"it the best product for girls",
         price: 345,
         countInStock:10,

@@ -113,11 +113,11 @@ const PlaceOrder= ()=> {
                         </tr>
                     </tbody>
                 </table>
-                <button type='submit' onClick={placeOrderHandler} className="place-order">
+                {/* <button type='submit' onClick={placeOrderHandler} className="place-order">
                     <Link to="/order" className='place-order'>
                         Place Order
                     </Link>
-                </button>
+                </button> */}
             </div>
         </div>
         </div>
