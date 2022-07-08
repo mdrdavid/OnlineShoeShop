@@ -8,6 +8,7 @@
     width: 350px;
     height: 200px;
 }
+
 .select-pay{
     display: flex;
     align-items: center;
@@ -17,13 +18,14 @@
     font-size: 18px;
     font-family: 300;
 }
+
 .radio-container{
     display: flex;
     align-items: center;
     justify-content: start;
-    /* margin-top: 20px; */
     padding: 10px;
 }
+
 .button{
     padding: 10px;
     background-color: green;
@@ -32,12 +34,14 @@
     border-radius: 5px;
     cursor: pointer;
 }
+
 .text-continue{
     font-size: 18px;
     color: white;
     text-decoration: none;
     
 }
+
 .form-check-label{
     padding-left: 15px;
 }

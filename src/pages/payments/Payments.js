@@ -22,7 +22,6 @@ const Payments= ()=> {
             <button type='submit' className='button'>
             <Link to="/placeorder" className='text-continue'>Continue</Link>
             </button>
-           
         </form>
     </div>
     </>

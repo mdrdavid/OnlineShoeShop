@@ -4,8 +4,9 @@ import{FaUserAlt} from "react-icons/fa"
 import {RiTruckFill} from "react-icons/ri"
 import {Link} from "react-router-dom"
 import {GoLocation} from "react-icons/go"
+import{BsPaypal} from "react-icons/bs"
 import "./placeorder.css"
-
+import shoe12 from "../../assets/images/shoes/shoe12.jpg"
 const PlaceOrder= ()=> {
     const placeOrderHandler =(e)=>{
         e.preventDefault()
@@ -67,10 +68,11 @@ const PlaceOrder= ()=> {
         <div className='order-products'>
                 <div className='order-product' >
                     <div className='col-md-3'>
-                        <img src="imgae" alt='product'/>
+                        <img src={shoe12} alt='product'
+                        style={{width: "50px", height: "50px"}}/>
                     </div>
-                    <div className='col-md-d d-flex'>
-                        <Link to={"/"}>
+                    <div className='page-link'>
+                        <Link to={"/"} className="page-link">
                             <h6>Girls Nike shoes</h6>
                         </Link>
                     </div>
@@ -113,11 +115,14 @@ const PlaceOrder= ()=> {
                         </tr>
                     </tbody>
                 </table>
-                {/* <button type='submit' onClick={placeOrderHandler} className="place-order">
+                {/* <div>
+                   <BsPaypal amount ={345}/>
+                </div> */}
+                <button type='submit' onClick={placeOrderHandler} className="place-order">
                     <Link to="/order" className='place-order'>
                         Place Order
                     </Link>
-                </button> */}
+                </button>
             </div>
         </div>
         </div>

@@ -6,8 +6,6 @@ import Products from '../../data/Products'
 import "./shopsection.css"
 
  const  ShopSection= ()=> {
-console.log("products",Products.image)
-
   return (
     <div className ="container">
         <div className='shopsection'>
@@ -20,21 +18,18 @@ console.log("products",Products.image)
                                 <div className='border-product'>
                                     <Link to={'/products/${product._id'}>
                                         <div className='shopBack'>
-                                            <img src={Products.image} alt={Products.name}/>
+                                            <img src={Products.imageUrl} alt={Products.name}/>
                                             </div>
                                     </Link>
                                     <div className='shoptext'>
                                         <p>
-                                            {/* <Link to={`/Productss/${Products._id}`}
-                                            // {...Products.name}
-                                            </Link> */}
                                             <Link to={`/Products/${Products._id}`}
                                             {...Products.name}></Link>
                                             </p>
                                             <Rating 
                                             value ={Products.rating}
                                             text= {`${Products.numReviews} reviews`}
-                                            image={Products.image}/>
+                                            image={Products.imageFile}/>
                                             <h3>${Products.price}</h3>
                                             </div>
                                     </div>

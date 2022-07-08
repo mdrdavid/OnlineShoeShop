@@ -5,10 +5,13 @@
 .order-detail{
     display: flex;
     flex-direction: row;
-    border: 1px solid black;
+    border: 1px solid lightgrey;
     justify-content: space-around;
     align-items: center;
     width: 80%;
+    height: 150px;
+    background-color: lightblue;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
 }
 .order-products{
     display: flex;
@@ -16,6 +19,7 @@
     justify-content: space-around;
     align-items: center;
     width: 80%;
+    margin-top: 20px;
 }
 .order-product{
     display: flex;
@@ -31,6 +35,12 @@
     border-radius: 50%;
     padding-top: 5px;
 }
+
+.page-link {
+    text-decoration: none;
+    color: black;
+}
+
 .subtotal-order{
     display: flex;
     flex-direction: column;

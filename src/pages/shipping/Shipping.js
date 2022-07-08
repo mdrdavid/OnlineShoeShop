@@ -1,5 +1,4 @@
 import React from 'react'
-import { BrowserRouter } from 'react-router-dom'
 import Header from '../../components/profileComponents/mainheader/Header'
 import {Link} from "react-router-dom"
 import "./shipping.css"
@@ -8,14 +7,12 @@ const Shipping= ()=> {
     const submitHandler =(e)=>{
         e.prevenetDefaulr()
     }
-  return (
-      <>
-     
-      <Header/>
-     
+return (
+    <>
+    <Header/>
     <div className='container f-flex login'>
         <form 
-        className='login'
+        className='form-login'
         onSubmit={submitHandler}>
             <h6>DELIVERY ADDRESS</h6> 
             <input type="text" placeholder="Enter address" className="input"/>
@@ -24,7 +21,7 @@ const Shipping= ()=> {
             <input type="text" placeholder="Enter country" className="input"/>
 
             <button type="submit" className ="btn">
-                <Link to="/payment" className="tezt-white">
+                <Link to="/payments" className="link-continue">
                     Continue
                 </Link>
             </button>
@@ -34,6 +31,6 @@ const Shipping= ()=> {
         </form>
     </div>
     </>
-  )
+)
 }
 export default Shipping
