@@ -1,11 +1,10 @@
 import React from 'react'
-import mtn from "./mtn.png"
 
 const Products= [
     {
         _id: "1",
-        name: "velco for girls",
-        imageUrl:"https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+        name: "Velcro Ballerrinas for Girls (pink)",
+        imageUrl:"/assets/images/shoes/shoe12.jpg",
         description:"it the best product for u",
         price: 87,
         countInStock:3,
@@ -14,9 +13,9 @@ const Products= [
     },
     {
         _id: "2",
-        name: "sss",
-        imageFile:"/assets/images/shoes.jpg",
-        description:"it the best product for girls",
+        name: "Men's Ball Sneakers (42)",
+        imageFile:"/assets/images/shoes/shoe14.jpg",
+        description:"It the best product for girls",
         price: 100,
         countInStock:10,
         rating: 4,
@@ -24,8 +23,8 @@ const Products= [
     },
     {
         _id: "3",
-        name: "sneakers",
-        image: mtn,
+        name: "High Hills for Women (41)",
+        image: "/assets/images/shoes/shoe6.jpg",
         description:"it the best product for girls",
         price: 345,
         countInStock:0,
@@ -34,8 +33,8 @@ const Products= [
     },
     {
         _id: "4",
-        name: "sneakers",
-        imageFile:"/assets/images",
+        name: "Sneakers for Men (red)",
+        image: "/assets/images/shoes/shoe9.jpg",
         description:"it the best product for girls",
         price: 345,
         countInStock:10,
@@ -44,8 +43,8 @@ const Products= [
     },
     {
         _id: "5",
-        name: "sneakers",
-        image:"/assets/images",
+        name: "High Hills for Women (brown)",
+        image: "/assets/images/shoes/shoe2.jpg",
         description:"it the best product for girls",
         price: 365,
         countInStock:7,
@@ -54,8 +53,8 @@ const Products= [
     },
     {
         _id: "6",
-        name: "sneakers",
-        image:"/assets/images",
+        name: "Sneakers for Men (brown)",
+        image: "/assets/images/shoes/shoe1.jpg",
         description:"it the best product for girls",
         price: 45,
         countInStock:0,

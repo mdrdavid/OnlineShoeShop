@@ -1,8 +1,6 @@
 import React from 'react'
 import { Link } from "react-router-dom"
 import TopHeader from '../topheader/TopHeader';
-import logo from "../../../assets/images/logo.jpg"
-import shoe10 from "../../../assets/images/shoe10.jpg"
 import { useState } from "react"
 import "./header.css"
 import {AiFillShopping} from "react-icons/ai"
@@ -23,7 +21,7 @@ const Header = () => {
             <div className='head-container'>
                 <div className='col-md-3 col-4 d-flex align-items-center'>
                     <Link className='navbar-brand' to="/">
-                        <img alt='logo' src={shoe10} width={60} height={60}/>
+                        <img alt='logo' src="/assets/images/shoe10.jpg" width={60} height={60}/>
                     </Link>
                 </div>
                 <div className='links'>

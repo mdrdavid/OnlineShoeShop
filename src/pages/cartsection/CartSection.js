@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Header from '../../components/profileComponents/mainheader/Header'
 import "./cartscreen.css"
-import shoe16 from "../../assets/images/shoes/shoe16.jpg"
+
 
 const  CartSection= ()=> {
     <Header/>
@@ -19,7 +19,7 @@ const  CartSection= ()=> {
                 <i className='fas fa-times'></i>
             </div>
             <div className='cart-image'>
-                <img src={shoe16} alt='nike'
+                <img src="/assets/images/shoes/shoe16.jpg" alt='nike'
                 style={{width:"250px", height:"200px"}}/>
             </div>
             <div className='cart-text'>

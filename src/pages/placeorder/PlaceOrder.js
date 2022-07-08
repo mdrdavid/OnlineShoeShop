@@ -6,7 +6,6 @@ import {Link} from "react-router-dom"
 import {GoLocation} from "react-icons/go"
 import{BsPaypal} from "react-icons/bs"
 import "./placeorder.css"
-import shoe12 from "../../assets/images/shoes/shoe12.jpg"
 const PlaceOrder= ()=> {
     const placeOrderHandler =(e)=>{
         e.preventDefault()
@@ -65,7 +64,7 @@ const PlaceOrder= ()=> {
         <div className='order-products'>
                 <div className='order-product' >
                     <div className='col-md-3'>
-                        <img src={shoe12} alt='product'
+                        <img src="/assets/images/shoes/shoe12.jpg" alt='product'
                         style={{width: "50px", height: "50px"}}/>
                     </div>
                     <div className='page-link'>

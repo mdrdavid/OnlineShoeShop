@@ -1,23 +1,21 @@
 import React from 'react'
 import Header from '../../components/profileComponents/mainheader/Header'
 import Rating from "../../components/homeComponents/Rating"
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import Message from "../../components/loadingError/Error"
 import products from "../../components/data/Products"
 
 
 const SingleProduct= ({match})=> {
-    const product =products.find((p)=>p._id==match.params.is)
+    const product =products.find((p)=>p._id === match.params.is)
   return (
       <>
-     
       <Header/>
-      
     <div className='container single-product'>
         <div className='row'>
             <div className='col-md-6'>
                 <div className='single-image'>
-                    <img src={product.image} alt={product.name}/>
+                    <img src={product.image|| product.imageFile|| product.imageUrl} alt={product.name}/>
                 </div>
                 <div className='col-md-6'>
                     <div className='product-dtl'>

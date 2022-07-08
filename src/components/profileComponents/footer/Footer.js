@@ -1,33 +1,28 @@
 import React from 'react'
 import "./footer.css"
-import flexpay from "../../../assets/images/flexpay.png"
-import chapchap from "../../../assets/images/chapchap.png"
-import airtel from "../../../assets/images/airtel.jpeg"
-import payway from "../../../assets/images/payway.png"
-import mtn from "../../../assets/images/mtn.png"
 
 const Footer= ()=> {
   return (
     <div className='footer'>
       <div className='footer-container'>
         <div className='card-name'>
-          <img src={flexpay}
+          <img src="/assets/images/flexpay.png"
           alt='Master card' width={40} height={30}/>
         </div>
         <div className='card-name'>
-          <img src={chapchap}
+          <img src="/assets/images/chapchap.png"
           alt='Visa' width={40} height={30}/>
         </div>
         <div className='card-name'>
-          <img src={airtel}
+          <img src="/assets/images/airtel.jpeg"
           alt='paypal' width={40} height={30}/>
         </div>
         <div className='card-name'>
-          <img src={payway}
-          alt='express' width={40} height={30}/>
+          <img src="/assets/images/payway.png"
+          alt='payway' width={40} height={30}/>
         </div>
         <div className='card-name'>
-          <img src={mtn}
+          <img src="/assets/images/mtn.png"
           alt='discver' width={40} height={30}/>
         </div>
       </div>

@@ -11,13 +11,12 @@ const Product = (props) => {
     return (
         <div
             className='shop'
-            key={product._id}
-        >
+            key={product._id} >
             <div className='border-product'>
                 <Link to={`/products/${product._id}`}>
                     <div className='shopBack'>
                         <img src={product.imageUrl || product.imageFile || product.image} alt={product.name}
-                            style={{ width: "200px", height: "200px" }} />
+                            style={{ width: "100%", height: "200px" }} />
                     </div>
                 </Link>
                 <div className='shoptext'>

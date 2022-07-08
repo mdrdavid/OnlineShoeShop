@@ -3,15 +3,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    width: 100%;
 }
 .shopContainer{
     display: grid;
-    column-gap: 20px;
-    row-gap: 20px;
+    column-gap: 10px;
+    row-gap: 10px;
     grid-template-columns: repeat(3, 1fr);
     border: 1px solid black;
     width: 100vw;
+    height:  600px;
+    margin-top: 210px;
 }
 .shoeBack{
     border: 1px solid lightgrey;
@@ -21,9 +23,18 @@
 }
 .border-product{
     border: 1px solid black;
-    width: 400px;
-    height: 200px;
+    width: 300px;
+    height: 280px;
+    padding: 10px;
 }
 .shoptext{
     font-size: 18px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.shoetext p{
+    padding: 5px;
+    text-decoration: none;
 }
