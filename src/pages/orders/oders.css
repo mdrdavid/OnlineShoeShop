@@ -1,0 +1,149 @@
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.order-detail{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid lightgrey;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+    background-color: lightblue;
+    box-shadow: 0 5px 5px rgba(167, 226, 206, 0.4);
+}
+
+.info-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.order-box{
+    width: 50px;
+    height: 50px;
+    border: 1px solid grey;
+    background-color: gray;
+    border-radius: 50%;
+    padding-top: 10px;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    padding-left: 40px;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.paid{
+    background-color: green;
+}
+
+.notdelivered{
+    background-color: red;
+}
+
+
+.order-products{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.icon{
+    font-size: 30px;
+}
+
+.page-link {
+    text-decoration: none;
+    color: black;
+}
+
+.subtotal-info{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+   gap: 10px;
+}
+
+.subtotal-info p{
+    font-size: 17px;
+}
+
+.subtotal-order{
+    display: flex;
+    flex-direction: column;
+}
+
+.table{
+    border: 1px solid black;
+}
+
+.tbody:target td{
+    background-color: red;
+}
+
+tbody>tr>:nth-child(2){
+    color:black;
+    width:200px;
+    text-align:center;
+   }
+
+   tbody>:nth-child(2){
+    color:red; 
+    font-weight: bold;
+    background-color: gainsboro;
+   }
+
+   tbody>:nth-child(4){
+    color:red; 
+    font-weight: bold;
+    background-color: purple;
+   }
+
+.place-order{
+    padding: 10px;
+    background-color: green;
+    width: 300px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.place-order{
+    color: white;
+    text-decoration: none;
+}
+
+.user{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.info-section{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+}
+
+.info-section h5{
+    padding-bottom: 3px;
+    font-size: 17px;
+}
+.info-section p{
+    padding-bottom: 3px;
+}

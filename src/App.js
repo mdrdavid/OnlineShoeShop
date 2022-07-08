@@ -24,16 +24,16 @@ const App= ()=> {
           <Route path ="/profile" element={<ProfilePage/>}/>
           <Route path ="/cart/:id" element={<CartSection/>}/>
           <Route path ="/shipping" element={<Shipping/>}/>
-          <Route path ="/payments" element={<Payments/>}/>
           <Route path="/placeorder" element={<PlaceOrder/>}/>
           <Route path ="/login" element={<Login/>}/>
           <Route path ="order" element={<OrderSection/>}/>
           <Route PATH ="notfound" element={<NotFound/>}/>
           <Route path="/cart:productid" element={<CartSection/>} />
           <Route path="/cart" element={<CartSection />} />
-         <Route path="/payments/:productid" element={<Payments />} />
-         <Route path="/payments" element={<Payments />} />
-         <Route path="/singleproduct" element={<SingleProduct/>}/>
+         <Route path="/payments" element={<Payments />} >
+         <Route path=":productid" element={<Payments />} />
+         </Route>
+         {/* <Route path="/singleproduct" element={<SingleProduct/>}/> */}
       </Routes>
     </div>
   );

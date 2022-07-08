@@ -4,7 +4,7 @@ import{FaUserAlt} from "react-icons/fa"
 import {RiTruckFill} from "react-icons/ri"
 import {Link} from "react-router-dom"
 import {GoLocation} from "react-icons/go"
-import{BsPaypal} from "react-icons/bs"
+// import{BsPaypal} from "react-icons/bs"
 import "./placeorder.css"
 const PlaceOrder= ()=> {
     const placeOrderHandler =(e)=>{
