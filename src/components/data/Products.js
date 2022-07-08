@@ -1,11 +1,11 @@
 import React from 'react'
-import shoes from "../../assets/images/shoes.jpg"
+import mtn from "./mtn.png"
 
 const Products= [
     {
         _id: "1",
         name: "velco for girls",
-        imageUrl:"https://unsplash.com/photos/jvoZ-Aux9aw",
+        imageUrl:"https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
         description:"it the best product for u",
         price: 87,
         countInStock:3,
@@ -15,7 +15,7 @@ const Products= [
     {
         _id: "2",
         name: "sss",
-        imageFile:{shoes},
+        imageFile:"/assets/images/shoes.jpg",
         description:"it the best product for girls",
         price: 100,
         countInStock:10,
@@ -25,7 +25,7 @@ const Products= [
     {
         _id: "3",
         name: "sneakers",
-        image:"/assets/images",
+        image: mtn,
         description:"it the best product for girls",
         price: 345,
         countInStock:0,

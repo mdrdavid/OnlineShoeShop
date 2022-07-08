@@ -17,12 +17,12 @@ const PlaceOrder= ()=> {
     <div className='container'>
         <div className='order-detail'>
                 <div className='user'>
-                    <div className='col-md-4 center'>
+                    <div className='icon-section'>
                         <div className='alert-success order-box'>
-                            <i className='fa-user'><FaUserAlt/></i>
+                            <i className='fa-user icon'><FaUserAlt/></i>
                         </div>
                     </div>
-                    <div className='col-md-8 center'>
+                    <div className='info-section'>
                         <h5>
                             <strong>Customer</strong>
                         </h5>
@@ -31,14 +31,13 @@ const PlaceOrder= ()=> {
                     </div>
                 </div>
             {/* 2 */}
-            <div className='col-lg-4'>
                 <div className='user'>
-                    <div className='col-md-4 center'>
+                    <div className='icon-section'>
                         <div className='alert-success order-box'>
-                            <i className='fasn fa-truck-moving'><RiTruckFill/></i>
+                            <i className='fasn fa-truck-moving icon'><RiTruckFill/></i>
                         </div>
                     </div>
-                    <div className='col-md-8 center'>
+                    <div className='info-section'>
                         <h5>
                             <strong>Order info</strong>
                         </h5>
@@ -46,23 +45,21 @@ const PlaceOrder= ()=> {
                         <p>Pay method: paypal</p>
                     </div>
                 </div>
-            </div>
             {/* 3 */}
-            <div className='col-lg-4'>
                 <div className='user'>
-                    <div className='col-md-4 center'>
+                    <div className='icon-sectionr'>
                         <div className='alert-success order-box'>
-                            <i className='fasn fa-user'><GoLocation/></i>
+                            <i className='fasn fa-location icon'><GoLocation/></i>
                         </div>
                     </div>
-                    <div className='col-md-8 center'>
+                    <div className='info-section'>
                         <h5>
                             <strong>Deliver to</strong>
                         </h5>
+                        <p>Mityana District</p>
                         <p>Mityana ug , P.O.BOX 345 mityana ug</p>
                     </div>
                 </div>
-            </div>
         </div>
 
         <div className='order-products'>
@@ -76,11 +73,11 @@ const PlaceOrder= ()=> {
                             <h6>Girls Nike shoes</h6>
                         </Link>
                     </div>
-                    <div className='d-flex algin-items-center'>
+                    <div className='subtotal-info'>
                         <h4>Quantity</h4>
                         <h6>4</h6>
                     </div>
-                    <div className='d-flex algin-items-center'>
+                    <div className='subtotal-info'>
                         <h4>SUBTOTAL</h4>
                         <h6>#567</h6>
                     </div>
