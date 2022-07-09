@@ -1,0 +1,38 @@
+.form-containers{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.forms{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 30px;
+    padding-bottom: 10px;
+}
+label{
+    display: block;
+    text-align: start;
+    text-transform: uppercase;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+.form-control{
+    padding: 10px;
+    outline: none;
+    margin: auto;
+    width: 300px;
+    background-color: lightskyblue;
+    border: none;
+}
+.submit-button{
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    color: white;
+    background-color: green;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+}
