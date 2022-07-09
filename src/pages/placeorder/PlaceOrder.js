@@ -21,7 +21,7 @@ const PlaceOrder= ()=> {
                             <i className='fa-user icon'><FaUserAlt/></i>
                         </div>
                     </div>
-                    <div className='info-section'>
+                    <div className='infom-section'>
                         <h5>
                             <strong>Customer</strong>
                         </h5>
@@ -36,7 +36,7 @@ const PlaceOrder= ()=> {
                             <i className='fasn fa-truck-moving icon'><RiTruckFill/></i>
                         </div>
                     </div>
-                    <div className='info-section'>
+                    <div className='infom-section'>
                         <h5>
                             <strong>Order info</strong>
                         </h5>
@@ -46,12 +46,12 @@ const PlaceOrder= ()=> {
                 </div>
             {/* 3 */}
                 <div className='user'>
-                    <div className='icon-sectionr'>
+                    <div className='icon-section'>
                         <div className='alert-success order-box'>
                             <i className='fasn fa-location icon'><GoLocation/></i>
                         </div>
                     </div>
-                    <div className='info-section'>
+                    <div className='infom-section'>
                         <h5>
                             <strong>Deliver to</strong>
                         </h5>

@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
 }
+
 .order-detail{
     display: flex;
     flex-direction: row;
@@ -13,6 +14,7 @@
     background-color: lightgreen;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
 }
+
 .order-products{
     display: flex;
     flex-direction: row;
@@ -21,6 +23,7 @@
     width: 80%;
     margin-top: 20px;
 }
+
 .order-product{
     display: flex;
     flex-direction: row;
@@ -29,6 +32,7 @@
     align-items: center;
     border-bottom: 1px solid black;
 }
+
 .order-box{
     width: 50px;
     height: 50px;
@@ -105,7 +109,7 @@ tbody>tr>:nth-child(2){
     align-items: center;
 }
 
-.info-section{
+.infom-section{
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
@@ -113,10 +117,10 @@ tbody>tr>:nth-child(2){
     padding-left: 20px;
 }
 
-.info-section h5{
+.infom-section h5{
     padding-bottom: 3px;
     font-size: 17px;
 }
-.info-section p{
+.infom-section p{
     padding-bottom: 3px;
 }

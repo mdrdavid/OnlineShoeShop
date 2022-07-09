@@ -11,14 +11,12 @@ const OrderSection = () => {
     return (
         <>
             <Header />
-            <div className='container'>
-                <div className='order-detail'>
-                    <div className='icon-section'>
-                        <div className='col-md-4 center'>
+            <div className='order-container'>
+                <div className='order-details'>
+                    <div className='icons-section'>
                             <div className='alert-success order-box'>
-                                <i className='fas fa-user'><FaUserAlt /></i>
+                                <i className='fas fa-user icon'><FaUserAlt /></i>
                             </div>
-                        </div>
                         <div className='info'>
                             <h5>
                                 <strong>Customer</strong>
@@ -30,11 +28,9 @@ const OrderSection = () => {
                         </div>
                     </div>
                     {/* 2 */}
-                    <div className='icon-section'>
-                        <div className='icon'>
-                            <div className='alert-success order-box'>
-                                <i className='fas fa-truck-moving'><RiTruckFill /></i>
-                            </div>
+                    <div className='icons-section'>
+                        <div className='alert-success order-box'>
+                            <i className='fas fa-truck-moving icon'><RiTruckFill /></i>
                         </div>
                         <div className='info'>
                             <h5>
@@ -50,18 +46,16 @@ const OrderSection = () => {
                         </div>
                     </div>
                 {/* 3 */}
-                <div className='icon-section'>
-                        <div className='icon'>
-                            <div className='alert-success order-box'>
-                                <i className='fas fa-map-marker-alt'><GoLocation /></i>
-                            </div>
+                    <div className='icons-section'>
+                        <div className='alert-success order-box'>
+                            <i className='fas fa-map-marker-alt icon'><GoLocation /></i>
                         </div>
                         <div className='info'>
                             <h5>
                                 <strong>Deliver to</strong>
                             </h5>
                             <p>Address: Mityana Ug, Central Division</p>
-                                <p>P.O.BOX 1245 Mityana UG</p>
+                            <p>P.O.BOX 1245 Mityana UG</p>
                             <div className='bg-danger'>
                                 <p className='notdelivered'>
                                     Not Delivered
@@ -72,8 +66,8 @@ const OrderSection = () => {
                 </div>
             </div>
 
-            <div className=' order-products'>
-                    <div className='order-product row'>
+            <div className=' order-product'>
+                    <div className='order'>
                         <div className='col-md-3 col-6'>
                             <img src="/assets/images/shoes/shoe12.jpg" alt='product'
                                 style={{ width: "50px", height: "50px" }} />

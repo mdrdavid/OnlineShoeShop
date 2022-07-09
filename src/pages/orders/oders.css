@@ -1,27 +1,28 @@
-.container{
+.order-container{
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
-.order-detail{
+.order-details{
     display: flex;
     flex-direction: row;
     border: 1px solid lightgrey;
     justify-content: space-around;
     align-items: center;
-    width: 100%;
+    width: 85%;
     height: 150px;
-    background-color: lightblue;
+    background-color: lightgreen;
     box-shadow: 0 5px 5px rgba(167, 226, 206, 0.4);
+    margin-top: 50px;
 }
 
-.info-section{
+.icons-section{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    margin-top: 20px;
 }
 
 .order-box{
@@ -36,28 +37,41 @@
 .info{
     display: flex;
     flex-direction: column;
-    padding-left: 40px;
+    padding-left: 2px;
     justify-content: flex-start;
-    align-items: center;
-    border: 1px solid black;
+    align-items: flex-start;
 }
 
 .paid{
-    background-color: green;
+    background-color: blue;
+    padding: 5px;
+    margin-top: 3px;
+    width: 200px;
 }
 
 .notdelivered{
     background-color: red;
+    padding: 5px;
+    margin-top: 3px;
+    width: 200px;
 }
 
 
-.order-products{
+.order-product{
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: 85%;
     justify-content: space-around;
     align-items: center;
-    border-bottom: 1px solid black;
+    padding-top: 30px;
+}
+
+.order{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .icon{
@@ -85,10 +99,6 @@
     flex-direction: column;
 }
 
-.table{
-    border: 1px solid black;
-}
-
 .tbody:target td{
     background-color: red;
 }
@@ -111,39 +121,11 @@ tbody>tr>:nth-child(2){
     background-color: purple;
    }
 
-.place-order{
-    padding: 10px;
-    background-color: green;
-    width: 300px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.place-order{
-    color: white;
-    text-decoration: none;
-}
-
-.user{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.info-section{
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    align-items: flex-start;
-    padding-left: 20px;
-}
-
-.info-section h5{
+   .info h5{
     padding-bottom: 3px;
     font-size: 17px;
 }
-.info-section p{
+.infom p{
     padding-bottom: 3px;
+    text-decoration: none;
 }
