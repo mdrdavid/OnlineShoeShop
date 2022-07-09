@@ -3,11 +3,13 @@ import Header from '../../components/profileComponents/mainheader/Header'
 import Rating from "../../components/homeComponents/Rating"
 // import { Link } from 'react-router-dom'
 import Message from "../../components/loadingError/Error"
-import products from "../../components/data/Products"
+import Products from "../../components/data/Products"
+import "./singleproduct.css"
 
 
-const SingleProduct= ({match})=> {
-    const product =products.find((p)=>p._id === match.params.is)
+const SingleProduct= ()=> {
+    // const product =Products.find((p) => p._id === match.params._id)
+    const product =Products 
   return (
       <>
       <Header/>
@@ -15,7 +17,7 @@ const SingleProduct= ({match})=> {
         <div className='row'>
             <div className='col-md-6'>
                 <div className='single-image'>
-                    <img src={product.image|| product.imageFile|| product.imageUrl} alt={product.name}/>
+                    <img src={product.image || product.imageFile || product.imageUrl} alt={product.name}/>
                 </div>
                 <div className='col-md-6'>
                     <div className='product-dtl'>
@@ -23,7 +25,6 @@ const SingleProduct= ({match})=> {
                             <div className='product-name'>{product.name}</div>
                         </div>
                         <p>{product.description}</p>
-
                         <div className='product-count'>
                             <div className='d-flex'>
                                 <h6>Price</h6>

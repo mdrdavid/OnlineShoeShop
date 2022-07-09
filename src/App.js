@@ -33,7 +33,8 @@ const App= ()=> {
          <Route path="/payments" element={<Payments />} >
          <Route path=":productid" element={<Payments />} />
          </Route>
-         {/* <Route path="/singleproduct" element={<SingleProduct/>}/> */}
+         <Route path="/singleproduct" element={<SingleProduct/>}/>
+         <Route path="#" element={<NotFound/>}/>
       </Routes>
     </div>
   );
