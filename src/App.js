@@ -1,5 +1,7 @@
 
 import './App.css';
+import "./responsive.css"
+// import "react-toastify/dist/react-toastify.css"
 import { Routes, Route} from 'react-router-dom';
 import CartSection from './pages/cartsection/CartSection';
 import Home from './pages/home/Home';

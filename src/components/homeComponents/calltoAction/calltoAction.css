@@ -21,9 +21,7 @@
 height: 200px;
   width: 100vw;
   margin-top: 300px;
-  /* background-image: url(../../../assets/images/bg-image.jpg); */
   background-image: url("/public/assets/images/bg-image.jpg");
-
   background-repeat: no-repeat;
   background-color: #e9dccb;
 }
