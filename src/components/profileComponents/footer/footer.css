@@ -7,10 +7,12 @@
     align-items: center;
     flex-direction: row;
     gap:20px;
-    background-color: gray;
+    background-color: lightgrey
 }
 .card-name{
     display: flex;
-    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
     color: white;
 }

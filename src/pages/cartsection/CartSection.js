@@ -1,7 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Header from '../../components/profileComponents/mainheader/Header'
+import "./cartscreen.css"
+
 
 const  CartSection= ()=> {
+    <Header/>
   return (
     <div className='container'>
         <div className='alert-info'>
@@ -10,16 +14,17 @@ const  CartSection= ()=> {
                 (4)
             </Link>
         </div>
-        <div className='cart=items'>
+        <div className='cart-items'>
             <div className='remove-button'>
                 <i className='fas fa-times'></i>
             </div>
             <div className='cart-image'>
-                <img src='' alt='nike image'/>
+                <img src="/assets/images/shoes/shoe16.jpg" alt='nike'
+                style={{width:"250px", height:"200px"}}/>
             </div>
             <div className='cart-text'>
-                <Link to="#">
-                <h4>Nike Girls Shoe</h4>
+                <Link to="#" className='shoe-link'>
+                <h4 className='shoe-name'>Nike Girls Shoe</h4>
                 </Link>
             </div>
             <div className='cart-qty'>
@@ -44,12 +49,14 @@ const  CartSection= ()=> {
         </div>
         <hr/>
         <div className='cart-buttons'>
+            <div className='continue-shop'>
             <Link to="/" className='continue-shopping'>
-                <button>Continue Shopping</button>
+                <button className='continue'>Continue Shopping</button>
             </Link>
-            <div className='shipping'>
-                <button>
-                    <Link to="shipping" className='text-white'>
+            </div>
+            <div className='ship'>
+                <button className='shipping'>
+                    <Link to="/shipping" className='text'>
                         Checkout
                     </Link>
                 </button>

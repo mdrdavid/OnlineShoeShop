@@ -2,48 +2,52 @@ import React from 'react'
 import Rating from '../Rating'
 import Pagination from '../Pagination'
 import { Link } from 'react-router-dom'
+import Products from '../../data/Products'
+import "./shopsection.css"
 
- const  ShopSection= ()=> {
-     const products =["sneakers", "jeans", "sandles"]
-  return (
-    <div className ="container">
-        <div className='section'>
-            <div className='row'>
-                <div className='col-lh-12 col-md-12 article'>
-                    <div className='shopContainer row'>
-                        {products.map(product=>(
-                            <div 
-                            className='shop col-lf-4 col-md-6 col-sm-6'
-                            // key={product._id}
-                            key={product}
-                            >
-                                <div className='border-product'>
-                                    <Link to={'/products/${product._id'}>
-                                    {/* <Link to={'/products/${product'}> */}
-                                        <div className='shopBack'>
-                                            <img src={product.image} alt={product.name}/>
-                                            </div>
-                                    </Link>
-                                    <div className='shoptext'>
-                                        <p>
-                                            {/* <Link to={`/products/${product._id}`}
-                                            // {...product.name}
-                                            </Link> */}
-                                            </p>
-                                            <Rating 
-                                            value ={product.rating}
-                                            text= {`${product.numReviews} reviews`}/>
-                                            <h3>${product.price}</h3>
-                                            </div>
-                                    </div>
-                                    </div>
-                        ))}
-                        <Pagination/>
-                            </div>
+const Product = (props) => {
+    const { product } = props
+    console.log(product.imageUrl || product.imageFile || product.image)
+    return (
+        <div
+            className='shop'
+            key={product._id} >
+            <div className='border-product'>
+                <Link to={`/products/${product._id}`}>
+                    <div className='shopBack'>
+                        <img src={product.imageUrl || product.imageFile || product.image} alt={product.name}
+                            style={{ width: "100%", height: "200px" }} />
                     </div>
+                </Link>
+                <div className='shoptext'>
+                    <p>
+                        <Link to={`/products/${product._id}`}>
+                            {product.name}
+                        </Link>
+                    </p>
+                    <Rating
+                        value={product.rating}
+                        text={`${product.numReviews} reviews`}
+                        image={product.imageFile} />
+                    <h3>${product.price}</h3>
                 </div>
             </div>
         </div>
-  )
+    )
+}
+const ShopSection = () => {
+
+    return (
+        <div className="container">
+            <div className='shopsection'>
+                <div className='shopContainer'>
+                    {Products.map(product => (
+                        <Product product={product} key={product._id} />
+                    ))}
+                    {/* <Pagination/> */}
+                </div>
+            </div>
+        </div>
+    )
 }
 export default ShopSection

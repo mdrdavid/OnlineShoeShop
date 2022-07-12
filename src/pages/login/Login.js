@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
-import { BrowserRouter } from 'react-router-dom';
 import Header from '../../components/profileComponents/mainheader/Header';
 import "./login.css"
 
@@ -14,11 +13,20 @@ const Login= ()=> {
         setPassword(e.target.value)
     }
     const handleSubmit= (e)=>{
-        e.preventDefault()
-        setEmail('')
-        setPassword('')
+        e.preventDefault();
+const message ="Login success"
+        if(password===''){
+            alert('please enter password')
+        } else{
+alert(message)
+            setEmail('')
+            setPassword('')
+        }
     }
-  return (
+
+return (
+    <>
+    <Header/>
     <div className='login-container'>
         <form className='login-form' onSubmit={handleSubmit}>
             <input type="email"
@@ -31,16 +39,15 @@ const Login= ()=> {
             className="form-input"
             onChange={handlePassword}
             placeholder='pasword'/>
-            <button type='submit' className='btn'>Submit</button>
-            <p>
-            <BrowserRouter>  
-            <Link to={"/register"}>Create Account</Link>
-    </BrowserRouter>
+            <button type='submit' className='btn'>Login</button>
+            <p> 
+            <Link to={"/register"} className="toregister">Create Account</Link>
             </p>
 
         </form>
 
     </div>
-  )
+    </>
+)
 }
 export default Login;

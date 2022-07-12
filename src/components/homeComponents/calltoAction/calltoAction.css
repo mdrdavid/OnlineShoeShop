@@ -3,44 +3,43 @@
     padding: 0;
     box-sizing: border-box;
 }
-.subscription-section{
-    position: relative;
 
-}
 .container{
     padding: 10px;
     margin: 10px;
     display: flex;
-    /* justify-content: center; */
     width: 100vw;
     height: 400px;
     background-color: white;
-
 }
+
 .subscribe-head{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-  height: 200px;
+height: 200px;
   width: 100vw;
-  background-image: url(../../../assets/images/bg-image.jpg);
-  /* background-size: contain; */
+  margin-top: 300px;
+  /* background-image: url(../../../assets/images/bg-image.jpg); */
+  background-image: url("/public/assets/images/bg-image.jpg");
+
   background-repeat: no-repeat;
   background-color: #e9dccb;
-  
-
 }
+
 .subscribe-head h5{
     font-size: 30px;
     color: white;
     padding: 10px;
 }
+
 .subscribe-head p{
     font-size: 16px;
     color: white;
     padding: 10px;
 }
+
 .input{
     border-radius: 10px;
     border: none;

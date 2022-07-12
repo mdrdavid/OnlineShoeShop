@@ -1,0 +1,131 @@
+.order-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.order-details{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid lightgrey;
+    justify-content: space-around;
+    align-items: center;
+    width: 85%;
+    height: 150px;
+    background-color: lightgreen;
+    box-shadow: 0 5px 5px rgba(167, 226, 206, 0.4);
+    margin-top: 50px;
+}
+
+.icons-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.order-box{
+    width: 50px;
+    height: 50px;
+    border: 1px solid grey;
+    background-color: gray;
+    border-radius: 50%;
+    padding-top: 10px;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    padding-left: 2px;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.paid{
+    background-color: blue;
+    padding: 5px;
+    margin-top: 3px;
+    width: 200px;
+}
+
+.notdelivered{
+    background-color: red;
+    padding: 5px;
+    margin-top: 3px;
+    width: 200px;
+}
+
+
+.order-product{
+    display: flex;
+    flex-direction: row;
+    width: 85%;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.order{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.icon{
+    font-size: 30px;
+}
+
+.page-link {
+    text-decoration: none;
+    color: black;
+}
+
+.subtotal-info{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+   gap: 10px;
+}
+
+.subtotal-info p{
+    font-size: 17px;
+}
+
+.subtotal-order{
+    display: flex;
+    flex-direction: column;
+}
+
+.tbody:target td{
+    background-color: red;
+}
+
+tbody>tr>:nth-child(2){
+    color:black;
+    width:200px;
+    text-align:center;
+   }
+
+   tbody>:nth-child(2){
+    color:red; 
+    font-weight: bold;
+    background-color: gainsboro;
+   }
+
+   tbody>:nth-child(4){
+    color:red; 
+    font-weight: bold;
+    background-color: purple;
+   }
+
+   .info h5{
+    padding-bottom: 3px;
+    font-size: 17px;
+}
+.infom p{
+    padding-bottom: 3px;
+    text-decoration: none;
+}
