@@ -1,0 +1,110 @@
+.single-product{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.product{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    background-color: blanchedalmond;
+}
+
+.rating{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.customer-review h6{
+    font-size: 17px;
+}
+
+.customer-review form{
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.ratings strong{
+    font-weight: 400;
+    padding: 10px;
+
+}
+
+.bg-light{
+    padding: 10px;
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: lightgrey;
+}
+
+.reviews{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.reviews h6{
+    font-size: 18px;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.description{
+    padding: 10px;
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: lightgrey;
+}
+
+.description strong{
+    padding: 10px;
+}
+
+.description span{
+    padding: 10px;
+}
+
+.link-review{
+    background-color: bisque;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.login-review{
+    text-decoration: none;
+    color: black;
+}
+
+.login-review span{
+    font-size: 18px;
+}
+
+.alert{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/*product*/
+
+.display{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    border: 1px solid black;
+    padding: 10px;
+}
