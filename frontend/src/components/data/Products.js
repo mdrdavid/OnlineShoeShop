@@ -1,6 +1,6 @@
-import React from 'react'
 
-const Products= [
+
+const products= [
     {
         _id: "1",
         name: "Velcro Ballerrinas for Girls (pink)",
@@ -63,4 +63,4 @@ const Products= [
     },
 ]
 
-export default Products;
+export default products;
