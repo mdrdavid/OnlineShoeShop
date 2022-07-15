@@ -18,7 +18,7 @@ const SingleProduct= ({match})=> {
         };
         fetchproduct()
 
-    }, []);
+    }, [match]);
     return (
         <>
             <Header />
