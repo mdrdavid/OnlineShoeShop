@@ -1,25 +1,23 @@
 import React, { useState, useEffect } from 'react'
 import Header from '../../components/profileComponents/mainheader/Header'
-import Products from "../../components/data/Products"
 import "./singleproduct.css"
 import ProductCount from './productcount/ProductCount'
 import RatingSection from './ratingsection/RatingSection'
-// import axios from 'axios'
+import axios from 'axios'
 
 
 const SingleProduct= ({match})=> {
-    // const [product, setProduct] =useState({ })
-    // // const product =Products.find((p) => p._id === match.params._id)
+    const [product, setProduct] =useState({ })
+    // const product =Products.find((p) => p._id === match.params._id)
 
-    // useEffect(() => {
-    //     const fetchproduct = async () =>{
-    //         const {data} = await axios.get(`api/products/${match.params.id}`)
-    //         setProduct(data)
-    //     };
-    //     fetchproduct()
+    useEffect(() => {
+        const fetchproduct = async () =>{
+            const {data} = await axios.get(`api/products/${match.params.id}`)
+            setProduct(data)
+        };
+        fetchproduct()
 
-    // }, []);
-    const product= Products
+    }, []);
     return (
         <>
             <Header />
