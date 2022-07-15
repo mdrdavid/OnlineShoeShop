@@ -12,7 +12,8 @@ const SingleProduct= ({match})=> {
 
     useEffect(() => {
         const fetchproduct = async () =>{
-            const {data} = await axios.get(`api/products/${match.params.id}`)
+            // const {data} = await axios.get(`api/products/${match.params.id}`)
+            const {data} = await axios.get(`api/products/`)
             setProduct(data)
         };
         fetchproduct()
