@@ -2,7 +2,7 @@ import React from 'react'
 import Rating from '../Rating'
 import Pagination from '../Pagination'
 import { Link } from 'react-router-dom'
-import Products from '../../data/Products'
+import axios from "axios"
 import "./shopsection.css"
 
 const Product = (props) => {
@@ -36,15 +36,26 @@ const Product = (props) => {
     )
 }
 const ShopSection = () => {
+    const [products, setProducts] =useState({})
+    useEffect(()=>{
+const fetchproduct =async ()=>{
+const {data} = await axios.get("/api/products")
+setProducts(data)
+};
+fetchproduct();
+
+    },[])
 
     return (
         <div className="container">
             <div className='shopsection'>
                 <div className='shopContainer'>
-                    {Products.map(product => (
+                {
+                    Array.isArray(products) ? 
+                    products.map(product => (
                         <Product product={product} key={product._id} />
-                    ))}
-                    {/* <Pagination/> */}
+                    )): null}
+                    <Pagination/>
                 </div>
             </div>
         </div>
