@@ -1,7 +1,8 @@
 import express from "express"
-import products from "./data/Products.js";
+// import products from "./data/Products.js";
 import dotenv from "dotenv"
 import connectDatabase from "./config/MongoDB.js"
+import ImportData from "./DataImport.js"
 
 dotenv.config()
 connectDatabase()
@@ -9,16 +10,19 @@ connectDatabase()
 const app = express()
 
 
-// Load product from server
-app.get("/api/products" ,(req, res)=>{
-    res.json(products)
-});
+app.use("api/import",ImportData)
 
-// Single product from server
-app.get("/api/products/:id" ,(req, res)=>{
-     const product =products.find((p) => p._id === req.params._id)
-     res.json(product)
-});
+
+// // Load product from server
+// app.get("/api/products" ,(req, res)=>{
+//     res.json(products)
+// });
+
+// // Single product from server
+// app.get("/api/products/:id" ,(req, res)=>{
+//      const product =products.find((p) => p._id === req.params._id)
+//      res.json(product)
+// });
 
 
 app.get("/" ,(req, res)=>{

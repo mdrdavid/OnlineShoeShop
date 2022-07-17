@@ -2,7 +2,7 @@
 
 const products= [
     {
-        _id: "1",
+        // _id: "1",
         name: "Velcro Ballerrinas for Girls (pink)",
         imageUrl:"/assets/images/shoes/shoe12.jpg",
         description:"it the best product for u",
@@ -12,7 +12,6 @@ const products= [
         numReviews: 4
     },
     {
-        _id: "2",
         name: "Men's Ball Sneakers (42)",
         imageFile:"/assets/images/shoes/shoe14.jpg",
         description:"It the best product for girls",
@@ -22,7 +21,6 @@ const products= [
         numReviews: 2
     },
     {
-        _id: "3",
         name: "High Hills for Women (41)",
         image: "/assets/images/shoes/shoe6.jpg",
         description:"it the best product for girls",
@@ -32,7 +30,6 @@ const products= [
         numReviews: 3
     },
     {
-        _id: "4",
         name: "Sneakers for Men (red)",
         image: "/assets/images/shoes/shoe9.jpg",
         description:"it the best product for girls",
@@ -42,7 +39,6 @@ const products= [
         numReviews: 9
     },
     {
-        _id: "5",
         name: "High Hills for Women (brown)",
         image: "/assets/images/shoes/shoe2.jpg",
         description:"it the best product for girls",
@@ -52,11 +48,10 @@ const products= [
         numReviews: 2
     },
     {
-        _id: "6",
         name: "Sneakers for Men (brown)",
         image: "/assets/images/shoes/shoe1.jpg",
         description:"it the best product for girls",
-        price: 45,
+        price: 456,
         countInStock:0,
         rating: 0,
         numReviews: 0
