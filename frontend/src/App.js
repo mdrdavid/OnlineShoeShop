@@ -21,9 +21,10 @@ const App= ()=> {
     <div className="App">
       <Routes>
           <Route path="/" element={<Home/>}/>
-          <Route path="/products/:id" element={<SingleProduct/>}/>
           <Route path ="/register" element={<Register/>}/>
           <Route path ="/profile" element={<ProfilePage/>}/>
+          {/* <Route path ="api/products" element={<SingleProduct/>}/> */}
+          <Route path="/products/:id" element={<SingleProduct/>}/>
           <Route path ="/cart/:id" element={<CartSection/>}/>
           <Route path ="/shipping" element={<Shipping/>}/>
           <Route path="/placeorder" element={<PlaceOrder/>}/>

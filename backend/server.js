@@ -8,6 +8,7 @@ connectDatabase()
 
 const app = express()
 
+
 // Load product from server
 app.get("/api/products" ,(req, res)=>{
     res.json(products)

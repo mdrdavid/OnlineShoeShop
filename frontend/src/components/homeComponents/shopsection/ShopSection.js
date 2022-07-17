@@ -6,6 +6,7 @@ import axios from "axios"
 import "./shopsection.css"
 
 const Product = (props) => {
+    console.log(props)
     const { product } = props
     console.log(product.imageUrl || product.imageFile || product.image)
     return (
@@ -43,7 +44,6 @@ const {data} = await axios.get("/api/products")
 setProducts(data)
 };
 fetchproduct();
-
     },[])
 
     return (
