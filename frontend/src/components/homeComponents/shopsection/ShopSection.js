@@ -1,6 +1,6 @@
 import React ,{useEffect, useState}from 'react'
 import Rating from '../Rating'
-import Pagination from '../Pagination'
+import Pagination from '../../homeComponents/pagination/Pagination'
 import { Link } from 'react-router-dom'
 import axios from "axios"
 import "./shopsection.css"

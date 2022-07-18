@@ -1,0 +1,23 @@
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    cursor: pointer;
+    width: 100vw;
+}
+.pagination{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.pagination .page-item{
+    text-decoration: none;
+    list-style: none;
+    border: 1px solid black;
+    border-radius: 2px;
+   padding: 20px;
+}
+.page-item .active{
+    background-color: black;
+}
