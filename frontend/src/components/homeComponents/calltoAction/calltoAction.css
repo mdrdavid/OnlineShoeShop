@@ -4,26 +4,27 @@
     box-sizing: border-box;
 }
 
-.container{
+/* .sub-container{
     padding: 10px;
     margin: 10px;
     display: flex;
     width: 100vw;
-    height: 400px;
-    background-color: white;
-}
+    height: 200px;
+    background-color: blueviolet;
+} */
 
 .subscribe-head{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-height: 200px;
-  width: 100vw;
-  margin-top: 300px;
-  background-image: url("/public/assets/images/bg-image.jpg");
-  background-repeat: no-repeat;
-  background-color: #e9dccb;
+    margin-top: 0;
+    height: 200px;
+    width: 100vw;
+    /* margin-top: 300px; */
+    background-image: url("/public/assets/images/bg-image.jpg");
+    background-repeat: no-repeat;
+    background-color: #e9dccb;
 }
 
 .subscribe-head h5{

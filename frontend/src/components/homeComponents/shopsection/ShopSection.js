@@ -1,6 +1,6 @@
 import React ,{useEffect, useState}from 'react'
 import Rating from '../Rating'
-import Pagination from '../../homeComponents/pagination/Pagination'
+// import Pagination from '../../homeComponents/pagination/Pagination'
 import { Link } from 'react-router-dom'
 import axios from "axios"
 import "./shopsection.css"
@@ -48,7 +48,6 @@ fetchproduct();
     },[])
 
     return (
-        <div className="container">
             <div className='shopsection'>
                 <div className='shopContainer'>
                 {
@@ -56,10 +55,9 @@ fetchproduct();
                     products.map(product => (
                         <Product product={product} key={product._id} />
                     )): null}
-                    <Pagination/>
+                    {/* <Pagination/> */}
                 </div>
             </div>
-        </div>
     )
 }
 export default ShopSection
