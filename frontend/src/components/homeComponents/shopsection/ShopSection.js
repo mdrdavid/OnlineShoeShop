@@ -4,6 +4,7 @@ import Pagination from '../../homeComponents/pagination/Pagination'
 import { Link } from 'react-router-dom'
 import axios from "axios"
 import "./shopsection.css"
+import { URL } from '../../Constants'
 
 const Product = (props) => {
     console.log(props)
@@ -40,7 +41,7 @@ const ShopSection = () => {
     const [products, setProducts] =useState({})
     useEffect(()=>{
 const fetchproduct =async ()=>{
-const {data} = await axios.get("/api/products")
+const {data} = await axios.get(`${URL}/api/products`)
 setProducts(data)
 };
 fetchproduct();

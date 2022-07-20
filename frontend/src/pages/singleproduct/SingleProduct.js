@@ -4,16 +4,16 @@ import "./singleproduct.css"
 import ProductCount from './productcount/ProductCount'
 import RatingSection from './ratingsection/RatingSection'
 import axios from 'axios'
+import { URL } from "../../components/Constants"
 
 
 const SingleProduct= ({match})=> {
     const [product, setProduct] =useState({ })
-    // const product =Products.find((p) => p._id === match.params._id)
 
     useEffect(() => {
         const fetchproduct = async () =>{
-            // const {data} = await axios.get(`api/products/${match.params.id}`)
-            const {data} = await axios.get(`api/products/`)
+            // const {data} = await axios.get(`${URL}/api/products/:id${match.params.id}`)
+            const {data} = await axios.get(`${URL}/api/products/:id`)
             setProduct(data)
         };
         fetchproduct()
@@ -25,7 +25,8 @@ const SingleProduct= ({match})=> {
             <div className='single-product'>
                 <div className='product'>
                     <div className='single-image'>
-                        <img src={product.image || product.imageFile || product.imageUrl} alt={product.name} />
+                        <img src={product.image || product.imageFile || product.imageUrl} alt={product.name}
+                        style={{whith: "500px", height: "300px"}} />
                     </div>
                     <div className='product-detail'>
                         <div className='product-info'>
