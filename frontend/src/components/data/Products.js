@@ -14,7 +14,7 @@ const products= [
     {
         _id: "2",
         name: "Men's Ball Sneakers (42)",
-        imageFile:"/assets/images/shoes/shoe14.jpg",
+        imageUrl:"/assets/images/shoes/shoe14.jpg",
         description:"It the best product for girls",
         price: 100,
         countInStock:10,
@@ -24,7 +24,7 @@ const products= [
     {
         _id: "3",
         name: "High Hills for Women (41)",
-        image: "/assets/images/shoes/shoe6.jpg",
+        imageUrl: "/assets/images/shoes/shoe6.jpg",
         description:"it the best product for girls",
         price: 345,
         countInStock:0,
@@ -34,7 +34,7 @@ const products= [
     {
         _id: "4",
         name: "Sneakers for Men (red)",
-        image: "/assets/images/shoes/shoe9.jpg",
+        imageUrl: "/assets/images/shoes/shoe9.jpg",
         description:"it the best product for girls",
         price: 345,
         countInStock:10,
@@ -44,7 +44,7 @@ const products= [
     {
         _id: "5",
         name: "High Hills for Women (brown)",
-        image: "/assets/images/shoes/shoe2.jpg",
+        imageUrl: "/assets/images/shoes/shoe2.jpg",
         description:"it the best product for girls",
         price: 365,
         countInStock:7,
@@ -54,7 +54,7 @@ const products= [
     {
         _id: "6",
         name: "Sneakers for Men (brown)",
-        image: "/assets/images/shoes/shoe1.jpg",
+        imageUrl: "/assets/images/shoes/shoe1.jpg",
         description:"it the best product for girls",
         price: 45,
         countInStock:0,
