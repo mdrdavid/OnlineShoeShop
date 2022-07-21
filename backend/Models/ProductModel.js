@@ -14,7 +14,7 @@ const reviewSchema =mongoose.Schema({
         required: true
     },
     user:{
-        type:mongoose.Schema.objectId,
+        type:mongoose.Schema.ObjectId,
         required:true,
         ref:"User",
     }
