@@ -5,6 +5,7 @@ import connectDatabase from "./config/MongoDB.js"
 import ImportData from "./DataImport.js"
 import cors from "cors"
 import productRoute from "./Routes/ProductRoutes.js"
+import { errorHandler, notFound } from "./Middleware/Error.js";
 
 
 
@@ -16,8 +17,11 @@ const app = express()
 app.use(cors());
 
 
-// app.use("/api/import", ImportData)
-// app.use("/api/products", productRoute)
+app.use("/api/import", ImportData)
+app.use("/api/products", productRoute)
+// Error handler middleware
+app.use(notFound)
+app.use(errorHandler)
 
 
 // Load product from server
