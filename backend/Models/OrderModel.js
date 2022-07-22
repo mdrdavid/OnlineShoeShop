@@ -72,7 +72,7 @@ deliveredAt:{
         timestamps: true
     }
 )
-
+//create model from schema
 const Order = mongoose.model("Order", orderSchema)
 
 export default User

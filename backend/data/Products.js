@@ -3,6 +3,7 @@
 const products= [
     {
         // _id: "1",
+        // Mongodb provides each document with it's id
         name: "Velcro Ballerrinas for Girls (pink)",
         imageUrl:"/assets/images/shoes/shoe12.jpg",
         description:"it the best product for u",
