@@ -23,7 +23,7 @@ const products= [
     },
     {
         name: "High Hills for Women (41)",
-        image: "/assets/images/shoes/shoe6.jpg",
+        imageUrl: "/assets/images/shoes/shoe6.jpg",
         description:"it the best product for girls",
         price: 345,
         countInStock:0,
@@ -32,7 +32,7 @@ const products= [
     },
     {
         name: "Sneakers for Men (red)",
-        image: "/assets/images/shoes/shoe9.jpg",
+        imageUrl: "/assets/images/shoes/shoe9.jpg",
         description:"it the best product for girls",
         price: 345,
         countInStock:10,
@@ -41,7 +41,7 @@ const products= [
     },
     {
         name: "High Hills for Women (brown)",
-        image: "/assets/images/shoes/shoe2.jpg",
+        imageUrl: "/assets/images/shoes/shoe2.jpg",
         description:"it the best product for girls",
         price: 365,
         countInStock:7,
@@ -50,7 +50,7 @@ const products= [
     },
     {
         name: "Sneakers for Men (brown)",
-        image: "/assets/images/shoes/shoe1.jpg",
+        imageUrl: "/assets/images/shoes/shoe1.jpg",
         description:"it the best product for girls",
         price: 456,
         countInStock:0,
