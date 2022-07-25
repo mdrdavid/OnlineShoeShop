@@ -1,32 +1,52 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import Header from '../../components/profileComponents/mainheader/Header'
 import "./singleproduct.css"
+import {useDispatch, useSelector } from "react-redux"
+import {listProductDetails} from "../../Redux/Actions/ProductActions"
 import ProductCount from './productcount/ProductCount'
 import RatingSection from './ratingsection/RatingSection'
-import axios from 'axios'
-import { URL } from "../../components/Constants"
+import Loading from '../../components/loadingError/Loading'
+import Message from '../../components/loadingError/Error'
+import { useParams } from 'react-router-dom'
+// import axios from 'axios'
+// import { URL } from "../../components/Constants"
 
 
 const SingleProduct= ({match})=> {
-    const [product, setProduct] =useState({ })
+    // const [product, setProduct] =useState({ })
+    const { productId } = useParams();
+    // const productId = match.params.id
+    const dispatch = useDispatch()
+
+    const productDetails = useSelector((state)=>state.productDetails)
+    const {loading, error, product} = productDetails
 
     useEffect(() => {
-        const fetchproduct = async () =>{
-            // const {data} = await axios.get(`${URL}/api/products/:id${match.params.id}`)
-            const {data} = await axios.get(`${URL}/api/products/:id`)
-            setProduct(data)
-        };
-        fetchproduct()
+        dispatch(listProductDetails(productId))
+        // const fetchproduct = async () =>{
+        //     // const {data} = await axios.get(`${URL}/api/products/:id${match.params.id}`)
+        //     const {data} = await axios.get(`${URL}/api/products/:id`)
+        //     setProduct(data)
+        // };
+        // fetchproduct()
 
-    }, [match]);
+    }, [dispatch, productId]);
     return (
         <>
             <Header />
             <div className='single-product'>
-                <div className='product'>
+
+                { loading ? (
+                    <Loading/>
+                ) 
+                :error ? (
+                    <Message variant="alert-danger">{error}</Message>)
+                :
+                (
+                    <div className='product'>
                     <div className='single-image'>
                         <img src={product.image || product.imageFile || product.imageUrl} alt={product.name}
-                        style={{whith: "500px", height: "300px"}} />
+                            style={{ whith: "500px", height: "300px" }} />
                     </div>
                     <div className='product-detail'>
                         <div className='product-info'>
@@ -38,11 +58,13 @@ const SingleProduct= ({match})=> {
                         </div>
 
                     </div>
-                </div>
-                {/* Rating */}
+                      {/* Rating */}
                 <div className='rating'>
                     <RatingSection />
                 </div>
+                </div>
+                )
+                }
             </div>
         </>
     )

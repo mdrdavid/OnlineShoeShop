@@ -61,7 +61,9 @@ const ShopSection = () => {
         <div className='shopsection'>
             <div className='shopContainer'>
                 {loading ? (
-                <div className='loading'><Loading/></div>) : error ? (<p><Message variant= "alert danger">{error}</Message></p>)
+                <div className='loading'><Loading/></div>) 
+                : 
+                error ? (<p><Message variant= "alert danger">{error}</Message></p>)
                     : (
                         Array.isArray(products) ?
                             products.map(product => (
