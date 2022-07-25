@@ -20,9 +20,7 @@ app.use(cors());
 app.use("/api/import", ImportData)
 app.use("/api/products", productRoute)
 
-// // Error handler middleware
-app.use(notFound)
-app.use(errorHandler)
+
 
 
 // Load product from server
@@ -40,6 +38,12 @@ app.get("/api/products/:id", (req, res) => {
 app.get("/", (req, res) => {
     res.send("API is running")
 });
+
+
+// // Error handler middleware
+app.use(notFound)
+app.use(errorHandler)
+
 
 const PORT = process.env.PORT || 1000;
 app.listen(PORT, console.log(`Server run in port ${PORT}`))

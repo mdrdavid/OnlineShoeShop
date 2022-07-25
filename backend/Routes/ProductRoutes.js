@@ -14,9 +14,9 @@ productRoute.get("/", asyncHandler(
 );
 
 //  GET SINGLE PRODUCT
-productRoute.get("/:id", asyncHandler(
+productRoute.get(`http://localhost:5000/api/products/:id`, asyncHandler(
     async(req, res) =>{
-        const product = await Product.findById(product.params.id)
+        const product = await Product.findById(product.useParams.id)
         if (product) {
             res.json(product)
         } else {
