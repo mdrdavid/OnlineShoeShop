@@ -1,10 +1,13 @@
-import React ,{useEffect, useState}from 'react'
-import Rating from '../Rating'
+import React ,{useEffect}from 'react'
+import Rating from '../Rating';
+import Loading from "../../loadingError/Loading"
+import Message from "../../loadingError/Error"
 // import Pagination from '../../homeComponents/pagination/Pagination'
 import { Link } from 'react-router-dom'
-import axios from "axios"
+import {useDispatch, useSelector } from "react-redux"
 import "./shopsection.css"
-import { URL } from '../../Constants'
+// import { URL } from '../../Constants'
+import { listProduct} from '../../../Redux/Actions/ProductActions'
 
 const Product = (props) => {
     console.log(props)
@@ -38,26 +41,37 @@ const Product = (props) => {
     )
 }
 const ShopSection = () => {
-    const [products, setProducts] =useState({})
+    // const [products, setProducts] =useState({})
+    const dispatch = useDispatch()
+
+    //productList from store.js
+    const productList = useSelector((state)=>state.productList)
+    const {loading, error, products}= productList
     useEffect(()=>{
-const fetchproduct =async ()=>{
-const {data} = await axios.get(`${URL}/api/products`)
-setProducts(data)
-};
-fetchproduct();
-    },[])
+        dispatch(listProduct())
+
+// const fetchproduct =async ()=>{
+// const {data} = await axios.get(`${URL}/api/products`)
+// setProducts(data)
+// };
+// fetchproduct();
+    },[dispatch])
 
     return (
-            <div className='shopsection'>
-                <div className='shopContainer'>
-                {
-                    Array.isArray(products) ? 
-                    products.map(product => (
-                        <Product product={product} key={product._id} />
-                    )): null}
-                    {/* <Pagination/> */}
-                </div>
+        <div className='shopsection'>
+            <div className='shopContainer'>
+                {loading ? (
+                <div className='loading'><Loading/></div>) : error ? (<p><Message variant= "alert danger">{error}</Message></p>)
+                    : (
+                        Array.isArray(products) ?
+                            products.map(product => (
+                                <Product product={product} key={product._id} />
+                            )) : null
+                    )
+                }
+                {/* <Pagination/> */}
             </div>
+        </div>
     )
 }
 export default ShopSection
