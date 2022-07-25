@@ -16,12 +16,13 @@ const app = express()
 
 app.use(cors());
 
+// API
 app.use("/api/import", ImportData)
 app.use("/api/products", productRoute)
 
 // // Error handler middleware
-// app.use(notFound)
-// app.use(errorHandler)
+app.use(notFound)
+app.use(errorHandler)
 
 
 // Load product from server
