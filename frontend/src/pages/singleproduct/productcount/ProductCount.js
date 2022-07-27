@@ -1,18 +1,18 @@
 import React, { useState } from "react"
-import { useParams} from "react-router-dom"
+// import { useParams} from "react-router-dom"
 import Rating from "../../../components/homeComponents/Rating"
 
 
 const ProductCount = ({product}) => {
 
     const [quantity, setQuantity] = useState(1)
-    const { productId } = useParams
-    const AddToCartHandler = (e) => {
-        e.preventDefault()
-        setQuantity(
-    `/cart${productId}?quantity=${quantity}`
-        )
-    }
+    // const { productId } = useParams
+    // const AddToCartHandler = (e) => {
+    //     e.preventDefault()
+    //     setQuantity(
+    // `/cart${productId}?quantity=${quantity}`
+    //     )
+    // }
     console.log("product",product);
     return (
         <div className='product-count'>
@@ -36,9 +36,12 @@ const ProductCount = ({product}) => {
             </div>
             {product.countInStock > 0 ? (
                 <>
-                    <div className='quantity'>
+                    <div className='quantity' >
                         <h6>Quantity</h6>
-                        <select>
+                        <select
+                        value={quantity}
+                        onChange ={(e)=>setQuantity(e.target.value)}
+                        >
                             {[...Array(product.countInStock).keys()].map((x) => (
                                 <option key={x + 1} value={x + 1}>
                                     {x + 1}

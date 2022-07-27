@@ -31,6 +31,14 @@ const SingleProduct= ({match})=> {
         // fetchproduct()
 
     }, [dispatch, productId]);
+
+    // const { productId } = useParams
+    // const AddToCartHandler = (e) => {
+    //     e.preventDefault()
+    //     setQuantity(
+    // `/cart${productId}?quantity=${quantity}`
+    //     )
+    // }
     return (
         <>
             <Header />
