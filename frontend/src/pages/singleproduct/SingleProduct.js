@@ -54,7 +54,7 @@ const SingleProduct= ({match})=> {
                         </div>
                         <p>{product.description}</p>
                         <div className='product-count'>
-                            <ProductCount />
+                            <ProductCount product={product}/>
                         </div>
 
                     </div>

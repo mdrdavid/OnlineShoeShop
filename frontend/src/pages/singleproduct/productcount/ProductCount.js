@@ -1,10 +1,20 @@
-import React from "react"
-import Products from "../../../components/data/Products"
+import React, { useState } from "react"
+import { useParams} from "react-router-dom"
 import Rating from "../../../components/homeComponents/Rating"
 
-const ProductCount =()=>{
-    const product= Products
-    return(
+
+const ProductCount = ({product}) => {
+
+    const [quantity, setQuantity] = useState(1)
+    const { productId } = useParams
+    const AddToCartHandler = (e) => {
+        e.preventDefault()
+        setQuantity(
+    `/cart${productId}?quantity=${quantity}`
+        )
+    }
+    console.log("product",product);
+    return (
         <div className='product-count'>
             <div className='display'>
                 <h6>Price</h6>
@@ -26,7 +36,7 @@ const ProductCount =()=>{
             </div>
             {product.countInStock > 0 ? (
                 <>
-                    <div className='d-flex justfy-content-between'>
+                    <div className='quantity'>
                         <h6>Quantity</h6>
                         <select>
                             {[...Array(product.countInStock).keys()].map((x) => (
@@ -36,12 +46,12 @@ const ProductCount =()=>{
                             ))}
                         </select>
                     </div>
-                    <button className='round-black-btn'>
+                    <button className='btn' onClick={AddToCartHandler}>
                         Add To Cart
                     </button>
                 </>
-            ) : null}
-        </div>
+            ) : null }
+            </div>
     )
 }
 export default ProductCount
