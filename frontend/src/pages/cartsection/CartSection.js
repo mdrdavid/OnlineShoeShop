@@ -8,7 +8,7 @@ import { addToCart } from '../../Redux/Actions/CartActions'
 import { useDispatch, useSelector } from 'react-redux'
 
 
-const CartSection = ({ match }) => {
+const CartSection = () => {
     const dispatch = useDispatch()
     const location = useLocation();
     const id = useParams();

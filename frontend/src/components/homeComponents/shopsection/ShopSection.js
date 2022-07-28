@@ -2,11 +2,9 @@ import React ,{useEffect}from 'react'
 import Rating from '../Rating';
 import Loading from "../../loadingError/Loading"
 import Message from "../../loadingError/Error"
-// import Pagination from '../../homeComponents/pagination/Pagination'
 import { Link } from 'react-router-dom'
 import {useDispatch, useSelector } from "react-redux"
 import "./shopsection.css"
-// import { URL } from '../../Constants'
 import { listProduct} from '../../../Redux/Actions/ProductActions'
 
 const Product = (props) => {
