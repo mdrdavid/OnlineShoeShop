@@ -4,24 +4,26 @@ import Header from '../../components/profileComponents/mainheader/Header';
 import "./login.css"
 
 const Login= ()=> {
-    const [email, setEmail]= useState('')
-    const [password, setPassword]= useState('')
+    const [input, setInput]= useState({
+        email:" ",
+        password:" "
+    })
+ 
     const handleChange=(e)=>{
-        setEmail(e.target.value)
+        setInput((prev)=>({...prev, [e.target.name]: e.target.value}))
     }
-    const handlePassword=(e)=>{
-        setPassword(e.target.value)
-    }
+    
+    
     const handleSubmit= (e)=>{
         e.preventDefault();
 const message ="Login success"
-        if(password===''){
+        if(input.password===''){
             alert('please enter password')
         } else{
 alert(message)
-            setEmail('')
-            setPassword('')
+setInput({ email: "", password: "" });
         }
+        
     }
 
 return (
@@ -30,15 +32,17 @@ return (
     <div className='login-container'>
         <form className='login-form' onSubmit={handleSubmit}>
             <input type="email"
-            value={email}
+            value={input.email}
             className="form-input"
             onChange={handleChange}
+            name="email"
             placeholder='Email'/>
             <input type="pasword"
-            value={password}
+            value={input.password}
+            name="password"
             className="form-input"
-            onChange={handlePassword}
-            placeholder='pasword'/>
+            onChange={handleChange}
+            placeholder='Password'/>
             <button type='submit' className='btn'>Login</button>
             <p> 
             <Link to={"/register"} className="toregister">Create Account</Link>
