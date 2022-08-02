@@ -4,27 +4,31 @@ import Header from '../../components/profileComponents/mainheader/Header'
 import "./register.css"
 
 const Register= ()=> {
-    const [email, setEmail]= useState('')
-    const [password, setPassword]= useState('')
-    const [name, setName]= useState('')
-    const handleUserName= (e)=>{
-        setName(e.target.value)
-    }
+    const [inputValue, setInputValue]= useState({
+        name: "",
+        email: "",
+        password: ""
+    })
+    // const [password, setPassword]= useState('')
+    // const [name, setName]= useState('')
+    // const handleUserName= (e)=>{
+    //     setName(e.target.value)
+    // }
     const handleChange=(e)=>{
-        setEmail(e.target.value)
+        setInputValue((prev)=>({...prev,[e.target.name]:e.target.value}))
     }
-    const handlePassword=(e)=>{
-        setPassword(e.target.value)
-    }
+    // const handlePassword=(e)=>{
+    //     setPassword(e.target.value)
+    // }
     const handleSubmit= (e)=>{
         e.preventDefault()
-        if(password ===''){
+        if(inputValue.password ===''){
             return 
         }
         else{
-            setEmail('')
-            setPassword('')
-            setName('')
+            setInputValue({ name: "",
+            email: "",
+            password: ""})
         }
     }
 
@@ -37,20 +41,23 @@ return (
             type="text" 
             placeholder="Username" 
             className='input-field'
-            value={name}
-            onChange={handleUserName}/>
+            name='name'
+            value={inputValue.name}
+            onChange={handleChange}/>
             <input 
             type="email" 
             placeholder="Email" 
+            name='email'
             className='input-field'
-            value={email}
+            value={inputValue.email}
             onChange={handleChange}/>
             <input 
             type="password" 
+            name='password'
             placeholder="Password" 
             className='input-field'
-            value={password}
-            onChange={handlePassword}/>
+            value={inputValue.password}
+            onChange={handleChange}/>
             
             <button type='submit' className='btn'>Register</button>
             <p>
