@@ -11,7 +11,7 @@ import { useDispatch, useSelector } from 'react-redux'
 const CartSection = () => {
     const dispatch = useDispatch()
     const location = useLocation();
-    const id = useParams();
+    const {id} = useParams();
 
     const qty = location.search ? Number(location.search.split("=")[1]) : 1
 

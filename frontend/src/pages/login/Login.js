@@ -21,7 +21,7 @@ const message ="Login success"
             alert('please enter password')
         } else{
 alert(message)
-setInput({ email: "", password: "" });
+setInput({ email: "", password: ""});
         }
         
     }
