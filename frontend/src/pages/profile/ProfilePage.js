@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Header from "../../components/profileComponents/mainheader/Header"
 // import Orders from "../orders/OrderSection"
 import ProfileTabs from "../../components/profileComponents/profiletabs/ProfileTabs"
@@ -6,7 +6,15 @@ import "./profile.css"
 
 
 const ProfilePage = () => {
+  // const [userDetail, setUserDetail] = useState({
+  //   name: "",
+  //   email: "",
+  //   password: ""
+  // })
 
+  // const handleChange =(e) =>{
+  //   setUserDetail((userDetail)=>({...userDetail, [e.target.name]:e.target.value}))
+  // }
   return (
     <>
       <Header />
