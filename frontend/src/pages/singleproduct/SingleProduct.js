@@ -16,12 +16,12 @@ const ProductQuantityButton = ({ onClick, children }) => {
     )
 }
 
-// export const QuantityK = ({product, onChange}) => {
-//     const [quantity, setQuantity]= useState(1)
-//     const handleQantity = (e) => {
-//         setQuantity(e.target.value)
-//         onChange=handleQantity()
-//     }
+// export const QuantityK = ({quantity, setQuantity}) => {
+//     // const [quantity, setQuantity]= useState(1)
+//     // const handleQantity = (e) => {
+//     //     setQuantity(e.target.value)
+//     //     onChange=handleQantity()
+//     // }
 //     return (
 //         <div className='quantity' >
 //             <h6>Quantity</h6>
@@ -64,6 +64,10 @@ const SingleProduct = () => {
     const handleQantity = (e) => {
         setQuantity(e.target.value)
     }
+    const styles ={
+        img: {with:"500px", height: "300px"},
+    }
+
     return (
         <>
             <Header />
@@ -79,9 +83,8 @@ const SingleProduct = () => {
                             <div className='product'>
                                 <div className='single-image'>
                                     <img src={product.image || product.imageFile || product.imageUrl} alt={product.name}
-                                        style={{ whith: "500px", height: "300px" }} />
+                                        style={styles.img} />
                                 </div>
-                                {/* <ProductDetail product={product} key={product._id}/> */}
                                 <div className='product-detail'>
                                     <div className='product-info'>
                                         <div className='product-name'>{product.name}</div>
@@ -113,6 +116,7 @@ const SingleProduct = () => {
                                     ) : null}
 
                                 </div>
+
                                 {/* Rating */}
                                 <div className='rating'>
                                     <RatingSection />

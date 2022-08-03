@@ -3,26 +3,32 @@ import { Link } from 'react-router-dom'
 import Header from '../../components/profileComponents/mainheader/Header'
 import "./cartscreen.css"
 import { useParams } from 'react-router-dom'
-import { useLocation } from "react-router-dom";
+import { useLocation} from "react-router-dom";
 import { addToCart } from '../../Redux/Actions/CartActions'
 import { useDispatch, useSelector } from 'react-redux'
+import { useNavigate } from 'react-router-dom';
+import { URL } from '../../components/Constants'
 
 
 const CartSection = () => {
     const dispatch = useDispatch()
+    const navigate = useNavigate()
     const location = useLocation();
-    const {id} = useParams();
-
+    const {productId} = useParams();
     const qty = location.search ? Number(location.search.split("=")[1]) : 1
-
-
     const cart = useSelector((state) => state.cart)
     const { cartItems } = cart;
+    const total = cartItems => (cartItems || []).reduce((a,i )=> a + i.qty * i.price, 0).toFixed(2)
     useEffect(() => {
-        if (id) {
-            dispatch(addToCart(id, qty))
+        if (productId) {
+            dispatch(addToCart(productId, qty))
         }
-    }, [dispatch, id, qty])
+    }, [dispatch, productId, qty])
+
+    const checkOutHandler = (e) =>{
+        e.preventDefault()
+        navigate.push("/login?redirect=shipping")
+    }
 
     return (
         <>
@@ -62,34 +68,35 @@ const CartSection = () => {
                                                         style={{ width: "250px", height: "200px" }} />
                                                 </div>
                                                 <div className='cart-text'>
-                                                    <Link to={`/products/${item.product}`} className='shoe-link'>
+                                                    <Link to={`${URL}/products/${item.product}`} className='shoe-link'>
                                                         <h4 className='shoe-name'>{item.name}</h4>
                                                     </Link>
                                                 </div>
                                                 <div className='cart-qty'>
                                                     <h6>QUANTITY</h6>
-                                                    <select>
-                                                        <option>1</option>
-                                                        <option>2</option>
-                                                        <option>3</option>
-                                                        <option>4</option>
-                                                        <option>5</option>
-                                                    </select>
+                                                    <select
+                                                    value={item.quantity}
+                                                    onChange={(e)=>dispatch(addToCart(item.product, Number(e.target.value)))}
+                                                >
+                                                    {[...Array(item.countInStock).keys()].map((x) => (
+                                                        <option key={x + 1} value={x + 1}>
+                                                            {x + 1}
+                                                        </option>
+                                                    ))}
+                                                </select>
                                                 </div>
                                                 <div className='cart-price'>
-                                                    <h6>SUB TOTAL</h6>
-                                                    <h4>$456</h4>
+                                                    <h6>PRICE</h6>
+                                                    <h4>${item.price}</h4>
                                                 </div>
                                             </div>
                                         })
                                         :
                                         null
                                 }
-
-
                                 <div className='total'>
                                     <span className='subtotal'>total</span>
-                                    <span className='total-price'>$567</span>
+                                    <span className='total-price'>${total}</span>
                                 </div>
                                 <hr />
                                 <div className='cart-buttons'>
@@ -98,13 +105,17 @@ const CartSection = () => {
                                             <button className='continue'>Continue Shopping</button>
                                         </Link>
                                     </div>
+                                    {
+                                        total > 0 && (
                                     <div className='ship'>
-                                        <button className='shipping'>
+                                        <button className='shipping' onClick={checkOutHandler}>
                                             <Link to="/shipping" className='text'>
                                                 Checkout
                                             </Link>
                                         </button>
                                     </div>
+                                        )
+                                    }
                                 </div>
                             </>
                         )
